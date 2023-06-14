@@ -64,5 +64,20 @@ radioButtons.forEach(function(radioButton) {
     });
   });
 
+  var elementsWithAlt = document.querySelectorAll('[alt]');
+
+  elementsWithAlt.forEach(function(element) {
+    var tooltip = document.createElement('span');
+    tooltip.classList.add('tooltiptext');
+    tooltip.innerHTML  = element.getAttribute('alt');
+
+    var tooltipWrapper = document.createElement('span');
+    tooltipWrapper.classList.add('tooltip');
+    tooltipWrapper.appendChild(element.cloneNode(true));
+    tooltipWrapper.appendChild(tooltip);
+
+    element.parentNode.replaceChild(tooltipWrapper, element);
+  });
+
 
 }
