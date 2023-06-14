@@ -278,7 +278,7 @@ input[type="radio"]:checked + label::before {
   }
 
   .tooltip .tooltiptext {
-    visibility: hidden;
+    visibility: visible;
     background-color: #90B79F;
     color: #fff;
     text-align: left;
@@ -289,7 +289,7 @@ input[type="radio"]:checked + label::before {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s;
     font-weight: 300;
     max-width: 400px;
