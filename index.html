@@ -25,47 +25,47 @@
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="denuncia" checked>
-                    <label for="report">Denúncia</label>
+                    <label for="denuncia">Denúncia</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="elogio">
-                    <label for="compliment">Elogio</label>
+                    <label for="elogio">Elogio</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="reclamacao">
-                    <label for="complaint">Reclamação</label>
+                    <label for="reclamacao">Reclamação</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="sugestao">
-                    <label for="suggestion">Sugestão</label>
+                    <label for="sugestao">Sugestão</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="critica">
-                    <label for="criticism">Crítica</label>
+                    <label for="critica">Crítica</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="solicitacao-informacao">
-                    <label for="information-request">Solicitação de Informação</label>
+                    <label for="isolicitacao-informacao">Solicitação de Informação</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao">
-                    <label for="certificate-request">Solicitação de Certidão</label>
+                    <label for="solicitacao-certidao">Solicitação de Certidão</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd">
-                    <label for="lgpd-request">Solicitação LGPD</label>
+                    <label for="solicitacao-lgpd">Solicitação LGPD</label>
                 </div>
 
                 <div class="radio-group">
                     <input type="radio" name="tipo-manifestacao" value="incidente-seguranca">
-                    <label for="personal-data-incident">Incidente de Segurança de Dados Pessoais</label>
+                    <label for="incidente-seguranca">Incidente de Segurança de Dados Pessoais</label>
                 </div>
             </form>
         </div>
@@ -526,6 +526,70 @@
 
         </div>
 
+        <!--incidente-seguranca-->
+        <div id="incidente-seguranca" class="div-show-hide div-show-hide-form">
+
+            <div class="subtitle-number">
+                <span>02</span><h2>O que aconteceu?</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="relato-incidente" class="label">Agora nos conte qual incidente deseja reportar
+                </label>
+                <textarea name="relato-incidente" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
+                <textarea name="o-que-espera" id="" cols="30" rows="10"></textarea>
+            </div>
+ 
+            <div class="subtitle-number">
+                <span>03</span><h2>Quando e onde?</h2>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
+                </label>
+                <input type="date" name="periodo" id=""/>
+            </div>
+            <div class="c-6 form-group">
+                <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
+                </label>
+                <input type="text" name="local" id=""/>
+            </div>
+            <div class="c-12 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="vinculada">
+                    <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                </div>
+            </div>
+
+            <div class="subtitle-number">
+                <span>04</span><h2>Envio de fotos e documentos</h2>
+            </div>
+            <div class="c-12 form-group">
+                <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
+                </label>
+                Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
+                <input type="file" name="local" id=""/>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
+                    dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
+                    </label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+        </div>
         <!---->
 
         <div id="aviso-obrigatoriedade" class="c-12">
