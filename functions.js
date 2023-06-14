@@ -53,16 +53,30 @@ radioButtons.forEach(function(radioButton) {
     }
 })
 
+showAllIdentifys();
+
 radioButtons.forEach(function(radioButton) {
     radioButton.addEventListener('change', function() {
+      showAllIdentifys();  
       const elements = document.querySelectorAll('.div-show-hide-form');
       elements.forEach(function(element) {
         element.style.display = 'none';
       });
       const atual = document.querySelector("#" + radioButton.value);
       atual.style.display = 'contents';
+      if(radioButton.value === 'elogio'){
+        document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
+      }
     });
   });
+
+  function showAllIdentifys(){
+    const identifys = document.querySelectorAll("input[name='identify']");
+
+    identifys.forEach(function(element) {
+        element.closest('.radio-group-identify').style.display = 'table'
+    });
+  }
 
   var elementsWithAlt = document.querySelectorAll('[alt]');
 
