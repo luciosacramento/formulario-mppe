@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-informacao" checked>
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-informacao">
                     <label for="isolicitacao-informacao">Solicitação de Informação</label>
                 </div>
 
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd">
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd" checked>
                     <label for="solicitacao-lgpd">Solicitação LGPD</label>
                 </div>
 
@@ -70,7 +70,7 @@
             </form>
         </div>
         <hr>
-        <div class="subtitle-number">
+        <div class="subtitle-number" id="subtitle-descricao">
             <span>01</span><h2>Descrição</h2>
         </div>
         <!--Você vai se identificar-->
@@ -855,7 +855,7 @@
             </div>
 
             <div class="c-3 form-group pessoa-fisica">
-                <label for="nome-titular" class="label">Nome do Tiular</label>
+                <label for="nome-titular" class="label">Nome do Titular</label>
                 <input type="text" name="nome-titular" />
             </div>
 
@@ -1078,6 +1078,155 @@ fornecê-los em arquivos separados<br> <br>
             </div>
 
         </div>
+        
+        <!--solicitacao-lgpd-->
+        <div id="solicitacao-lgpd" class=" div-show-hide-form">
+            <div class="subtitle-number">
+                <span>01</span><h2>Identificação do Manifestante</h2>
+            </div>
+            <div class="c-6 form-group ">
+                <label for="nome" class="label">Nome</label>
+                <input type="text" name="nome" />
+            </div>
+
+            <div class="c-3 form-group ">
+                <label for="cpf" class="label" alt="Somente números.">CPF</label>
+                <input type="text" name="cpf" />
+            </div>
+     
+            <div class="c-3 form-group">
+                <label for="email" class="label">E-mail</label>
+                <input type="email" name="email" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                <input type="email" name="confirmacao_email" />
+            </div>
+
+            <div class="subtitle-number">
+                <span>02</span><h2>Contato</h2>
+            </div>
+        
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Celular</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Fixo</label>
+                </div>
+            </div>
+    
+            <div class="c-3 form-group">
+                <label for="telefone" class="label">Telefone</label>
+                <input type="tel" name="telefone"/>
+            </div>
+    
+            <div class="c-3 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp">
+                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+
+            <div class="subtitle-number">
+                <span>03</span><h2>Natureza</h2>
+            </div>
+
+            <div class="c-12 form-group pessoa-fisica">
+                <label for="esolaridade" class="label">*Natureza da Solicitação</label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Confirmação de que há tratamento de meus dados pessoais no MPPE</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Informações sobre quais dados pessoais meus estão sendo tratados pelo MPPE</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Correção de meus dados pessoais por estarem incompletos, inexatos ou desatualizados</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Eliminação de meus dados pessoais por serem desnecessários, excessivos ou estejam sendo tratados de forma ilícita
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Eliminação dos meu dados pessoais dos sistemas e bancos do MPPE (obs: os dados pessoais tratados pelo MPPE por conta das suas competências legais não poderão ser
+                        eliminados, ainda que não tenha havido o consentimento do titular)
+                        </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Informação sobre compartilhamento de meus dados pessoais com entes públicos ou privados</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Revogação do consentimento de uso dos meus dados pessoais (obs: essa solicitação é cabível apenas quando o uso desse dados pessoais é opcional)
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="1">
+                    <label for="celular">Oposição ao uso de meus dados pessoais por terem sido tratados de forma irregular</label>
+                </div>
+                
+            </div>
+
+            <div class="c-12 form-group ">
+                <label for="tratamento" class="label">*O tratamento de dados pessoais normalmente envolve um grande número de setores
+                    do Ministério Público de Pernambuco. Assim, precisamos que nos indique abaixo o
+                    setor sobre o qual deseja informações ou alguma ação referente ao tratamento dos
+                    seus dados pessoais no MPPE.</label>
+                <select name="tratamento" >
+                    <option value="s">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="robservacoes" class="label" >Abaixo, se desejar, acrescente suas observações, esclarecimentos ou dúvidas sobre essa solicitação
+</label>
+                <textarea name="observacoes"  cols="30" rows="10"></textarea>
+            </div>
+
+            
+            <div class="subtitle-number">
+                <span>04</span><h2>Documentos</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="documento" class="label">*Envie por aqui uma foto sua, segurando seu documento oficial de identificação com
+                    foto, de forma que possamos conferir sua identidade. 
+                    
+                </label>
+                <input type="file" name="documento" />
+                <br>Observações:<br><br>
+                - O arquivo não deve possuir mais do que 20 MB.<br>
+                - O nome do arquivo não deve possuir mais de 150 caracteres.<br>
+                - Formatos permitidos: Imagem, PDF, Documentos com Texto, Áudio e Vídeo.<br>
+
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
+                    dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo LGPD</a>
+                    </label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+        </div>
+
+
         <!---->
         <div id="aviso-obrigatoriedade" class="c-12">
             *Todos os campos marcados em azul são obrigatórios.
