@@ -51,19 +51,18 @@ window.onload = function () {
             atual.style.display = 'contents';
             document.querySelector("#vai-identificar").style.display = 'contents';
 
-            if (radioButton.value === "solicitacao-certidao") {
+            if (radioButton.value === "solicitacao-certidao" || radioButton.value === "solicitacao-informacao") {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
-            }
-            if (radioButton.value === 'elogio') {
-                document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
-            }
-            if (radioButton.value === 'solicitacao-certidao') {
-                document.querySelector("#vai-identificar").style.display = 'none';
-            } else {
+            }else {
                 const atual = document.querySelector("#" + radioButton.value);
                 atual.style.display = 'contents';
             }
+
+            if (radioButton.value === 'elogio') {
+                document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
+            }
+            
         }
 
 
@@ -84,7 +83,7 @@ window.onload = function () {
             if (radioButton.value === 'elogio') {
                 document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
             }
-            if (radioButton.value === 'solicitacao-certidao') {
+            if (radioButton.value === 'solicitacao-certidao' || radioButton.value === "solicitacao-informacao") {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
             }

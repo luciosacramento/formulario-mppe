@@ -49,12 +49,12 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-informacao">
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-informacao" checked>
                     <label for="isolicitacao-informacao">Solicitação de Informação</label>
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao" checked>
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao">
                     <label for="solicitacao-certidao">Solicitação de Certidão</label>
                 </div>
 
@@ -909,10 +909,182 @@ fornecê-los em arquivos separados<br> <br>
             </div>
 
         </div>
+        <!--solicitacao-informacao-->
+        <div id="solicitacao-informacao" class=" div-show-hide-form">
+            <h2 class="subtitle">Identificação do Manifestante</h2>
+
+            <div class="c-3 form-group">
+                <label for="tipo-pessoa" class="label">Tipo Pessoa</label>
+                <select name="tipo-pessoa" >
+                    <option value="pessoa-fisica">Pessoal Física</option>
+                    <option value="pessoa-juridica">Pessoal Jurídica</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="cpf" class="label" alt="Somente números.">CPF</label>
+                <input type="text" name="cpf" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="nome" class="label">Nome</label>
+                <input type="text" name="nome" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="sexo" class="label">Sexo</label>
+                <select name="sexo" >
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
+                <input type="text" name="cnpj" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="razao-social" class="label">Razão Social</label>
+                <input type="text" name="razao-social" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="nome-fantasia" class="label">Nome Fantasia</label>
+                <input type="text" name="nome-fantasia" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="data-nascimento" class="label" alt="Ex:24/11/2012">Data de Nascimento
+                </label>
+                <input type="date" name="data-nascimento" />
+            </div>
+     
+            <div class="c-3 form-group">
+                <label for="email" class="label">E-mail</label>
+                <input type="email" name="email" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                <input type="email" name="confirmacao_email" />
+            </div>
+    
+            <h2 class="subtitle">Contato</h2>
+    
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Celular</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Fixo</label>
+                </div>
+            </div>
+    
+            <div class="c-3 form-group">
+                <label for="telefone" class="label">Telefone</label>
+                <input type="tel" name="telefone"/>
+            </div>
+    
+            <div class="c-3 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp">
+                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+            <hr>
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="esolaridade" class="label">Escolaridade</label>
+                <select name="esolaridade" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="subtitle-number">
+                <span>02</span><h2>Localidade</h2>
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="pais" class="label">País</label>
+                <select name="pais" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="pais-sde" class="label">País Sede</label>
+                <select name="pais-sede" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="estado" class="label">Estado</label>
+                <select name="estado" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="subtitle-number">
+                <span>03</span><h2>Descrição</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="relato-insatisfacao" class="label" >Solicitação</label>
+                <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="municipio" class="label">Municipio</label>
+                <select name="municipio" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="subtitle-number">
+                <span>04</span><h2>Documentos</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="documento" class="label">Você quer enviar algum documento ou imagem para complementar sua
+                    denúncia?                
+                </label>
+                Atenção: você só poderá enviar no máximo dois arquivos, ok?<br> <br>
+                <label for="documento" class="label">Primeiro Arquivo</label>
+                <input type="file" name="documento" /><br><br>
+                <label for="documento" class="label">Segundo Arquivo</label>
+                <input type="file" name="documento" />
+                <br>Observações:<br><br>
+                - O arquivo não deve possuir mais do que 20 MB.<br>
+                - O nome do arquivo não deve possuir mais de 150 caracteres.<br>
+                - Formatos permitidos: Imagem, PDF, Documentos com Texto, Áudio e Vídeo.<br>
+
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
+                    dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
+                    </label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+        </div>
         <!---->
         <div id="aviso-obrigatoriedade" class="c-12">
             *Todos os campos marcados em azul são obrigatórios.
         </div>  
+        <div class="c-12 text-right">
+            <button>Enviar</button>
+        </div>
     </div>
 </body>
 </html>

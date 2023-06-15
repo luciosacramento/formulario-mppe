@@ -326,8 +326,8 @@ input[type="radio"]:checked + label::before {
     border: 1px solid #81b69d;
   }
 
-button.bt-adicionar {
-  
+.text-right{
+  text-align: right;
 }
   
   
