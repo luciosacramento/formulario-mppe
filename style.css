@@ -51,7 +51,7 @@ header{
     margin: 0 auto;
 }
 
-.div-show-hide{
+.div-show-hide,.div-show-hide-from, #vai-identificar-form{
   width: 100%;
   display: contents;
 }

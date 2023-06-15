@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="denuncia" checked>
+                    <input type="radio" name="tipo-manifestacao" value="denuncia">
                     <label for="denuncia">Denúncia</label>
                 </div>
 
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao">
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao" checked>
                     <label for="solicitacao-certidao">Solicitação de Certidão</label>
                 </div>
 
@@ -109,138 +109,141 @@
                 </div>
             </div>
         </div>
-        <!--identificada-->
-        <div id="identificada" class="div-show-hide-identificar div-show-hide">
-            <h2 class="subtitle">Identificação do Manifestante</h2>
-     
-            <div class="c-3 form-group">
-                <label for="email" class="label">E-mail</label>
-                <input type="email" name="email" id=""/>
-            </div>
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
-                <input type="email" name="confirmacao_email" id=""/>
-            </div>
-    
-            <h2 class="subtitle">Contato</h2>
-    
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Celular</label>
-                </div>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Fixo</label>
-                </div>
-            </div>
-    
-            <div class="c-3 form-group">
-                <label for="telefone" class="label">Telefone</label>
-                <input type="tel" name="telefone"/>
-            </div>
-    
-            <div class="c-3 form-group">
-                <div class="checkbox">
-                    <input type="checkbox" id="whatsapp">
-                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
-                  </div>
-            </div>
-        </div>
-        <!--sigilosa-->
-        <div id="sigilosa" class="div-show-hide-identificar div-show-hide">
 
-            <h2 class="subtitle">Por que você precisa que seus dados fiquem sigilosos?</h2>
-
-            <div class="c-12 form-group">
-                <textarea name="porque-sigiloso" id="" cols="30" rows="10"></textarea>
-            </div>
-
-            <h2 class="subtitle">Identificação do Manifestante</h2>
-     
-            <div class="c-3 form-group">
-                <label for="email" class="label">E-mail</label>
-                <input type="email" name="email" id=""/>
-            </div>
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
-                <input type="email" name="confirmacao_email" id=""/>
-            </div>
-    
-            <h2 class="subtitle">Contato</h2>
-    
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Celular</label>
+        <div id="vai-identificar-form">
+            <!--identificada-->
+            <div id="identificada" class="div-show-hide-identificar div-show-hide">
+                <h2 class="subtitle">Identificação do Manifestante</h2>
+         
+                <div class="c-3 form-group">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" name="email" />
                 </div>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Fixo</label>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                    <input type="email" name="confirmacao_email" />
                 </div>
-            </div>
-    
-            <div class="c-3 form-group">
-                <label for="telefone" class="label">Telefone</label>
-                <input type="tel" name="telefone"/>
-            </div>
-    
-            <div class="c-3 form-group">
-                <div class="checkbox">
-                    <input type="checkbox" id="whatsapp">
-                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
-                  </div>
-            </div>
-        </div>
-        <!--anonima-->
-        <div id="anonima" class="div-show-hide-identificar div-show-hide">
-            <h2 class="subtitle">Por que necessita realizar sua manifestação sem se identificar?</h2>
-
-            <div class="c-12 form-group">
-                <textarea name="porque-anonimo" id="" cols="30" rows="10"></textarea>
-            </div>
-
-            <h2 class="subtitle">Identificação do Manifestante</h2>
-     
-            <div class="c-3 form-group">
-                <label for="email" class="label">E-mail</label>
-                <input type="email" name="email" id=""/>
-            </div>
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
-                <input type="email" name="confirmacao_email" id=""/>
-            </div>
-    
-            <h2 class="subtitle">Contato</h2>
-    
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Celular</label>
+        
+                <h2 class="subtitle">Contato</h2>
+        
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Celular</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Fixo</label>
+                    </div>
                 </div>
-                <div class="radio-group">
-                    <input type="radio" name="tipo-contato" value="celular">
-                    <label for="celular">Fixo</label>
+        
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Telefone</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
                 </div>
             </div>
+            <!--sigilosa-->
+            <div id="sigilosa" class="div-show-hide-identificar div-show-hide">
     
-            <div class="c-3 form-group">
-                <label for="telefone" class="label">Telefone</label>
-                <input type="tel" name="telefone"/>
+                <h2 class="subtitle">Por que você precisa que seus dados fiquem sigilosos?</h2>
+    
+                <div class="c-12 form-group">
+                    <textarea name="porque-sigiloso"  cols="30" rows="10"></textarea>
+                </div>
+    
+                <h2 class="subtitle">Identificação do Manifestante</h2>
+         
+                <div class="c-3 form-group">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" name="email" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                    <input type="email" name="confirmacao_email" />
+                </div>
+        
+                <h2 class="subtitle">Contato</h2>
+        
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Celular</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Fixo</label>
+                    </div>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Telefone</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
+                </div>
             </div>
+            <!--anonima-->
+            <div id="anonima" class="div-show-hide-identificar div-show-hide">
+                <h2 class="subtitle">Por que necessita realizar sua manifestação sem se identificar?</h2>
     
-            <div class="c-3 form-group">
-                <div class="checkbox">
-                    <input type="checkbox" id="whatsapp">
-                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
-                  </div>
+                <div class="c-12 form-group">
+                    <textarea name="porque-anonimo"  cols="30" rows="10"></textarea>
+                </div>
+    
+                <h2 class="subtitle">Identificação do Manifestante</h2>
+         
+                <div class="c-3 form-group">
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" name="email" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                    <input type="email" name="confirmacao_email" />
+                </div>
+        
+                <h2 class="subtitle">Contato</h2>
+        
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Celular</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" name="tipo-contato" value="celular">
+                        <label for="celular">Fixo</label>
+                    </div>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Telefone</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
+                </div>
             </div>
         </div>
         <!--form denuncia-->
-        <div id="denuncia" class="div-show-hide div-show-hide-form">
+        <div id="denuncia" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -257,11 +260,11 @@
                 tenha conhecimento."
                 
                 >Agora nos conte o que está acontecendo</label>
-                <textarea name="o-que-esta-acontecendo" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-esta-acontecendo"  cols="30" rows="10"></textarea>
             </div>
             <div class="c-12 form-group">
                 <label for="confirmacao_email" class="label">Coloque aqui o que você espera do Ministério Público</label>
-                <textarea name="o-que-esta-esperando" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-esta-esperando"  cols="30" rows="10"></textarea>
             </div>
 
             <div class="subtitle-number">
@@ -271,17 +274,17 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-3 form-group">
                 <label for="municipio" class="label">Município onde os fatos aconteceram
                 </label>
-                <select name="municipio" id="">
+                <select name="municipio" >
                     <option value="Selecione">Selecione</option>
                 </select>
             </div>
@@ -299,7 +302,7 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -319,7 +322,7 @@
         </div>
 
         <!--form elogio-->
-        <div id="elogio" class="div-show-hide div-show-hide-form">
+        <div id="elogio" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -327,7 +330,7 @@
 
             <div class="c-12 form-group">
                 <label for="relato-insatisfacao" class="label">Agora nos conte o que o deixou satisfeito com o MPPE</label>
-                <textarea name="relato-insatisfacao" id="" cols="30" rows="10"></textarea>
+                <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
  
             <div class="subtitle-number">
@@ -337,17 +340,17 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-3 form-group">
                 <label for="municipio" class="label">Município onde os fatos aconteceram
                 </label>
-                <select name="municipio" id="">
+                <select name="municipio" >
                     <option value="Selecione">Selecione</option>
                 </select>
             </div>
@@ -365,7 +368,7 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -385,7 +388,7 @@
         </div>
 
          <!--form critica-->
-         <div id="critica" class="div-show-hide div-show-hide-form">
+         <div id="critica" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -393,12 +396,12 @@
 
             <div class="c-12 form-group">
                 <label for="relato-insatisfacao" class="label" alt="Por favor, não esqueça de nos explicar como e onde os fatos se passaram. E, quando informar os nomes das pessoas, também é importante indicar quais os seus cargos.">Agora nos conte o que o deixou satisfeito com o MPPE</label>
-                <textarea name="relato-insatisfacao" id="" cols="30" rows="10"></textarea>
+                <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
             <div class="c-12 form-group">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
-                <textarea name="o-que-espera" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
  
             <div class="subtitle-number">
@@ -408,17 +411,17 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-3 form-group">
                 <label for="municipio" class="label">Município onde os fatos aconteceram
                 </label>
-                <select name="municipio" id="">
+                <select name="municipio" >
                     <option value="Selecione">Selecione</option>
                 </select>
             </div>
@@ -436,7 +439,7 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -456,7 +459,7 @@
         </div>
 
         <!--form reclamacao-->
-        <div id="reclamacao" class="div-show-hide div-show-hide-form">
+        <div id="reclamacao" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -466,12 +469,12 @@
                 <label for="relato-insatisfacao" class="label" alt="
                 Por favor, não esqueça de nos explicar como e onde os fatos se passaram. E, quando informar os nomes das pessoas, também é importante indicar quais os seus cargos.
                 ">Agora nos conte o que o deixou satisfeito com o MPPE</label>
-                <textarea name="relato-insatisfacao" id="" cols="30" rows="10"></textarea>
+                <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
             <div class="c-12 form-group">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
-                <textarea name="o-que-espera" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
  
             <div class="subtitle-number">
@@ -481,17 +484,17 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-3 form-group">
                 <label for="municipio" class="label">Município onde os fatos aconteceram
                 </label>
-                <select name="municipio" id="">
+                <select name="municipio" >
                     <option value="Selecione">Selecione</option>
                 </select>
             </div>
@@ -509,7 +512,7 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -529,7 +532,7 @@
         </div>
 
         <!--incidente-seguranca-->
-        <div id="incidente-seguranca" class="div-show-hide div-show-hide-form">
+        <div id="incidente-seguranca" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -538,12 +541,12 @@
             <div class="c-12 form-group">
                 <label for="relato-incidente" class="label">Agora nos conte qual incidente deseja reportar
                 </label>
-                <textarea name="relato-incidente" id="" cols="30" rows="10"></textarea>
+                <textarea name="relato-incidente"  cols="30" rows="10"></textarea>
             </div>
 
             <div class="c-12 form-group">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
-                <textarea name="o-que-espera" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
  
             <div class="subtitle-number">
@@ -553,12 +556,12 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-12 form-group">
                 <div class="checkbox">
@@ -574,7 +577,7 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -593,7 +596,7 @@
 
         </div>
         <!--sugestao-->
-        <div id="sugestao" class="div-show-hide div-show-hide-form">
+        <div id="sugestao" class=" div-show-hide-form">
 
             <div class="subtitle-number">
                 <span>02</span><h2>O que aconteceu?</h2>
@@ -602,12 +605,12 @@
             <div class="c-12 form-group">
                 <label for="relato-melhoras" class="label">Agora nos conte como podemos melhorar os serviços do Ministério Público
                 </label>
-                <textarea name="relato-melhoras" id="" cols="30" rows="10"></textarea>
+                <textarea name="relato-melhoras"  cols="30" rows="10"></textarea>
             </div>
 
             <div class="c-12 form-group">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
-                <textarea name="o-que-espera" id="" cols="30" rows="10"></textarea>
+                <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
  
             <div class="subtitle-number">
@@ -617,17 +620,17 @@
             <div class="c-3 form-group">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
-                <input type="date" name="periodo" id=""/>
+                <input type="date" name="periodo" />
             </div>
             <div class="c-6 form-group">
                 <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
                 </label>
-                <input type="text" name="local" id=""/>
+                <input type="text" name="local" />
             </div>
             <div class="c-3 form-group">
                 <label for="municipio" class="label">Município onde os fatos aconteceram
                 </label>
-                <select name="municipio" id="">
+                <select name="municipio" >
                     <option value="Selecione">Selecione</option>
                 </select>
             </div>
@@ -644,9 +647,200 @@
                 <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
                 Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
-                <input type="file" name="local" id=""/>
+                <input type="file" name="local" />
             </div>
 
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
+                    dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
+                    </label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+        </div>
+        <!--solicitacao-certidao-->
+        <div id="solicitacao-certidao" class=" div-show-hide-form">
+            <h2 class="subtitle">Identificação do Manifestante</h2>
+
+            <div class="c-3 form-group">
+                <label for="tipo-pessoa" class="label">Tipo Pessoa</label>
+                <select name="tipo-pessoa" >
+                    <option value="pessoa-fisica">Pessoal Física</option>
+                    <option value="pessoa-juridica">Pessoal Jurídica</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="cpf" class="label" alt="Somente números.">CPF</label>
+                <input type="text" name="cpf" />
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="nome" class="label">Nome</label>
+                <input type="text" name="nome" />
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="sexo" class="label">Sexo</label>
+                <select name="sexo" >
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="data-nascimento" class="label" alt="Ex:24/11/2012">Data de Nascimento
+                </label>
+                <input type="date" name="data-nascimento" />
+            </div>
+     
+            <div class="c-3 form-group">
+                <label for="email" class="label">E-mail</label>
+                <input type="email" name="email" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
+                <input type="email" name="confirmacao_email" />
+            </div>
+    
+            <h2 class="subtitle">Contato</h2>
+    
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Tipo de Contato?</label>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Celular</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Fixo</label>
+                </div>
+            </div>
+    
+            <div class="c-3 form-group">
+                <label for="telefone" class="label">Telefone</label>
+                <input type="tel" name="telefone"/>
+            </div>
+    
+            <div class="c-3 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp">
+                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+            <hr>
+            <div class="c-3 form-group">
+                <label for="esolaridade" class="label">Escolaridade</label>
+                <select name="esolaridade" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="subtitle-number">
+                <span>02</span><h2>Localidade</h2>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="pais" class="label">País</label>
+                <select name="pais" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="estado" class="label">Estado</label>
+                <select name="estado" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="municipio" class="label">Municipio</label>
+                <select name="municipio" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="subtitle-number">
+                <span>03</span><h2>Envio de fotos e documentos</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="documento" class="label">Documento(s)                
+                </label>
+                - Atenção: É obrigatório anexar arquivo contendo o documento CPF do solicitante da certidão. Os dados de identificação do documento devem estar legíveis (número, nome e data de nascimento)<br> <br>
+                <input type="file" name="documento" />
+            </div>
+
+            <div class="subtitle-number">
+                <span>04</span><h2>De quem é a certidão?</h2>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">A certidão será emitida em nome de</label>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="c-3 form-group">
+                <label for="cpf-titular" class="label" alt="Somente números.">CPF do Titular </label>
+                <input type="text" name="cpf-titular" />
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="nome-titular" class="label">Nome do Tiular</label>
+                <input type="text" name="nome-titular" />
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="data-nascimento-titular" class="label" alt="Ex:24/11/2012">Data de Nascimento do Titular
+                </label>
+                <input type="date" name="data-nascimento-titular" />
+            </div>
+
+            <div class="subtitle-number">
+                <span>03</span><h2>Documentos - CPF do Titular e Procuração</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="documento" class="label">Documento(s)                
+                </label>
+                É necessário anexar arquivo(s) contendo o documento CPF do titular da certidão e uma
+procuração com autorização legal do titular da certidão. Os dados de identificação do
+documento devem estar legíveis (número, nome e data de nascimento). Não é obrigatório
+fornecê-los em arquivos separados<br> <br>
+                <input type="file" name="documento" />
+            </div>
+            <div class="c-12 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="vinculada">
+                    <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                </div>
+            </div>
+            <div class="c-12 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="veracidade">
+                    <label for="veracidade"><span>Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
+                        omitir, em documento público ou particular, declaração que devia constar, ou nele
+                        inserir ou fazer declaração falsa ou diversa que devia ser escrita, [...], é crime.
+                        Concordo</span></label>
+                </div>
+            </div>
             <div class="c-12 form-group">
                 <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
                     dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
