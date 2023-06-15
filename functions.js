@@ -93,6 +93,27 @@ window.onload = function () {
 
         });
     });
+
+    /* Quando mudar o tipo de pessoa:
+    PESSOA FISICA / PESSOA JURIDICA */
+    ChangeTipoPessoa('pessoa-fisica');
+    function ChangeTipoPessoa(value){
+        var all = document.querySelectorAll(".pessoa-fisica,.pessoa-juridica");
+        var selectedClass  = value;
+
+        all.forEach(function (element) {
+            if(element.classList.contains(selectedClass)){
+                element.style.display = 'grid';
+            }else{
+                element.style.display = 'none';
+            }   
+        });
+    }
+    
+    document.querySelector("select[name='tipo-pessoa']").addEventListener('change', function () {        
+        ChangeTipoPessoa(this.value);
+    });
+
     /*Tornando visível todos os Boxes de identificação*/
     function showAllIdentifys() {
         const elements = document.querySelectorAll('.radio-group-identify');

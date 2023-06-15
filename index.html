@@ -677,17 +677,17 @@
                 </select>
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="nome" class="label">Nome</label>
                 <input type="text" name="nome" />
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="sexo" class="label">Sexo</label>
                 <select name="sexo" >
                     <option value="masculino">Masculino</option>
@@ -695,7 +695,22 @@
                 </select>
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
+                <input type="text" name="cnpj" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="razao-social" class="label">Razão Social</label>
+                <input type="text" name="razao-social" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="nome-fantasia" class="label">Nome Fantasia</label>
+                <input type="text" name="nome-fantasia" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="data-nascimento" class="label" alt="Ex:24/11/2012">Data de Nascimento
                 </label>
                 <input type="date" name="data-nascimento" />
@@ -736,7 +751,7 @@
                   </div>
             </div>
             <hr>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="esolaridade" class="label">Escolaridade</label>
                 <select name="esolaridade" >
                     <option value="">Selecione</option>
@@ -747,9 +762,16 @@
                 <span>02</span><h2>Localidade</h2>
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="pais" class="label">País</label>
                 <select name="pais" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="pais-sde" class="label">País Sede</label>
+                <select name="pais-sede" >
                     <option value="">Selecione</option>
                 </select>
             </div>
@@ -769,22 +791,34 @@
             </div>
 
             <div class="subtitle-number">
-                <span>03</span><h2>Envio de fotos e documentos</h2>
+                <span>03</span><h2>Documentos</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group pessoa-fisica">
                 <label for="documento" class="label">Documento(s)                
                 </label>
                 - Atenção: É obrigatório anexar arquivo contendo o documento CPF do solicitante da certidão. Os dados de identificação do documento devem estar legíveis (número, nome e data de nascimento)<br> <br>
                 <input type="file" name="documento" />
+                Observações:<br>
+                O arquivo não deve possuir mais do que 20 MB
             </div>
 
-            <div class="subtitle-number">
-                <span>04</span><h2>De quem é a certidão?</h2>
+            <div class="c-12 form-group pessoa-juridica">
+                <label for="documento-cnpj" class="label">Documento CNPJ                
+                </label>
+                - Atenção: É obrigatório anexar um arquivo contendo o documento CNPJ para o titular da certidão<br> <br>
+                <input type="file" name="documento-cnpj" />
+                Observações:<br>
+                O arquivo não deve possuir mais do que 20 MB
+            </div>
+            <div class="pessoa-juridica">
+                <div class="subtitle-number">
+                    <span>04</span><h2>Filiais</h2>
+                </div>
             </div>
 
-            <div class="c-3 form-group">
-                <label for="confirmacao_email" class="label">A certidão será emitida em nome de</label>
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Deseja emitir a mesma certidão para as filiais do estabelecimento?</label>
                 <div class="radio-group">
                     <input type="radio" name="tipo-contato" value="celular">
                     <label for="celular">Sim</label>
@@ -794,30 +828,49 @@
                     <label for="celular">Não</label>
                 </div>
             </div>
+            <div class="c-12 form-group">
+                Atenção: É obrigatório inserir um CNPJ para cada filial que solicitar a certidão e deve ser relacionado ao CNPJ da filial.
+                    <br> <br>
+            </div>
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
+                <input type="text" name="cnpj" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <label for="documento-cnpj-filial" class="label">Documento CNPJ                
+                </label>
+                <input type="file" name="documento-cnpj-filial" />
+            </div>
+
+            <div class="c-3 form-group pessoa-juridica">
+                <button class="bt-adicionar">Adicionar</button>
+            </div>
 
             <hr>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="cpf-titular" class="label" alt="Somente números.">CPF do Titular </label>
                 <input type="text" name="cpf-titular" />
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="nome-titular" class="label">Nome do Tiular</label>
                 <input type="text" name="nome-titular" />
             </div>
 
-            <div class="c-3 form-group">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="data-nascimento-titular" class="label" alt="Ex:24/11/2012">Data de Nascimento do Titular
                 </label>
                 <input type="date" name="data-nascimento-titular" />
             </div>
-
-            <div class="subtitle-number">
-                <span>03</span><h2>Documentos - CPF do Titular e Procuração</h2>
+            <div class="pessoa-fisica">
+                <div class="subtitle-number">
+                    <span>03</span><h2>Documentos - CPF do Titular e Procuração</h2>
+                </div>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group pessoa-fisica">
                 <label for="documento" class="label">Documento(s)                
                 </label>
                 É necessário anexar arquivo(s) contendo o documento CPF do titular da certidão e uma
@@ -828,8 +881,8 @@ fornecê-los em arquivos separados<br> <br>
             </div>
             <div class="c-12 form-group">
                 <div class="checkbox">
-                    <input type="checkbox" id="vinculada">
-                    <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                    <input type="checkbox" id="vinculada2">
+                    <label for="vinculada2"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
                 </div>
             </div>
             <div class="c-12 form-group">
