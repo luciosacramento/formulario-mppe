@@ -9,7 +9,7 @@
 <script src="functions.js"></script>
 <body>
     <header>
-        <img src="img/header.gif" alt="">
+        <img src="img/header.gif">
     </header>
 
     <div class="container">
@@ -18,7 +18,7 @@
             <form>
                 <div class="radio-group">
                     <div class="radio-group">
-                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher">
+                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher" checked>
                         <label for="violence-against-women">Violência contra a mulher</label>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd" checked>
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd">
                     <label for="solicitacao-lgpd">Solicitação LGPD</label>
                 </div>
 
@@ -1226,6 +1226,257 @@ fornecê-los em arquivos separados<br> <br>
 
         </div>
 
+        <!-- violence-contra-mulher-->
+
+        <div id="violence-contra-mulher" class=" div-show-hide-form">
+            <div class="c-12">
+                <img src="img/muher_01.jpg" >
+            </div>
+            <div class="c-12 form-group">
+                <label for="o-que-esta-acontacendo" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
+                campo
+                ">Agora nos conte o que está acontecendo?</label>
+                <textarea name="o-que-esta-acontacendo"  cols="30" rows="10"></textarea>
+            </div>
+            <div class="c-3 form-group">
+                <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
+                </label>
+                <input type="date" name="periodo" />
+            </div>
+            <div class="c-12 form-group">
+                <label for="local" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
+                campo
+                ">Em que local específico, empresa ou instituição os fatos se passaram (Descreva)?
+            </label>
+                <textarea name="local"  cols="30" rows="10"></textarea>
+            </div>
+            <div class="c-3 form-group">
+                <label for="municipio" class="label">Município onde os fatos aconteceram</label>
+                <select name="municipio" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+            <img src="img/muher_02.jpg" >
+            <div class="c-12 form-group">
+                <label for="local" class="label" alt="Toda mulher tem o direito de procurar a Promotora ou o Promotor de Justiça da
+                sua comarca e pedir esclarecimentos sobre o processo que iniciou, narrar
+                detalhes da violência que sofreu, apresentar provas e pedir apoio.
+                ">Você gostaria de alguma providência do(a) Promotor(a) de Justiça?
+            </label>
+                <textarea name="local"  cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="subtitle-number">
+                <span>02</span><h2>Quem sofreu ou sofre a violência</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="quem-sofre" class="label">Você é a pessoa que está sofrendo violência?</label>
+                <div class="radio-group">
+                    <input type="radio" name="quem-sofre" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="quem-sofre" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+            <div class="c-6 form-group">
+                <label for="desejo-identificar" class="label">Como deseja realizar sua manifestação de Violência contra Mulher?</label>
+                <select name="desejo-identificar" >
+                    <option value="">Desejo me identificar</option>
+                </select>
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="nome" class="label">Qual o seu nome?</label>
+                <input type="text" name="nome" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="telefone" class="label">Qual o seu telefone?</label>
+                <input type="tel" name="telefone" />
+            </div>
+            <div class="c-3 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp">
+                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+            <div class="c-3 form-group">
+                <label for="email" class="label">Qual o seu e-mail?</label>
+                <input type="email" name="email" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="confirmacao_email" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
+                <input type="email" name="confirmacao_email" />
+            </div>
+
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="nome-vitima" class="label">Nome da vítima</label>
+                <input type="text" name="nome-vitima" />
+            </div>
+
+            <div class="c-6 form-group pessoa-fisica">
+                <label for="telefone-vitima" class="label">Qual telefone da vítima para contato?</label>
+                <input type="tel" name="telefone-vitima" />
+            </div>
+            <div class="c-3 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp-vitima">
+                    <label for="whatsapp-vitima"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+            <div class="c-3 form-group">
+                <label for="email-vitima" class="label">Qual o e-mail da vítima?
+                </label>
+                <input type="email" name="email-vitima" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="confirmacao_email-vitima" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
+                <input type="email" name="confirmacao_email-vitima" />
+            </div>
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="endereco-vitima" class="label" alt="Nome da rua ou avenida, número da casa, número do apartamento ou referência">Qual o endereço completo da vítima?</label>
+                <input type="text" name="endereco-vitima" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="municipio-vitima" class="label">Em qual cidade reside a vítima?</label>
+                <select name="municipio-vitima" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+            <div class="c-3 form-group">
+                <label for="pessoa-com-deficiencia-vitima" class="label">A vítima é pessoa com deficiência?</label>
+                <div class="radio-group">
+                    <input type="radio" name="pessoa-com-deficiencia-vitima" value="S">
+                    <label for="pessoa-com-deficiencia-vitima">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="pessoa-com-deficiencia-vitima" value="N">
+                    <label for="pessoa-com-deficiencia-vitima">Não</label>
+                </div>
+            </div>
+            <div class="c-3 form-group">
+                <label for="local-vitima" class="label">Em que local os fatos ocorreram?</label>
+                <select name="local-vitima" >
+                    <option value="">Na minha casa</option>
+                    <option value="">No meu trabalho</option>
+                    <option value="">Na rua ou ambiente público</option>
+                    <option value="">Redes sociais, internet ou whatsapp</option>
+                    <option value="">Outros</option>
+                </select>
+            </div>
+            <div class="subtitle-number">
+                <span>03</span><h2>O Agressor</h2>
+            </div>
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="nome-agressor" class="label">Nome do(a) agressor(a)</label>
+                <input type="text" name="nome-agressor" />
+            </div>
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="endereco-agressor" class="label">Endereço do(a) agressor(a)</label>
+                <input type="text" name="endereco-agressor" />
+            </div>
+            <div class="c-3 form-group pessoa-fisica">
+                <label for="telefone-agressor" class="label">Possui telefone ou outro meio de contato do(a) agressor(a)? Se sim, qual?
+                </label>
+                <input type="tel" name="telefone-agressor" />
+            </div>
+
+            <img src="img/muher_03.jpg">
+
+            <div class="subtitle-number">
+                <span>04</span><h2>Histórico jurídico</h2>
+            </div>
+            <div class="c-3 form-group">
+                <label for="medida-protetiva" class="label">Já existe alguma medida protetiva em favor da vítima?
+                </label>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="S">
+                    <label for="medida-protetiva">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="N">
+                    <label for="medida-protetiva">Não</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="NS">
+                    <label for="medida-protetiva">Não sei</label>
+                </div>
+            </div>
+            <div class="c-3 form-group">
+                <label for="numero-medida" class="label">Sabe o número desta medida, o juiz e a comarca?</label>
+                <div class="radio-group">
+                    <input type="radio" name="numero-medida" value="S">
+                    <label for="numero-medida">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="numero-medida" value="N">
+                    <label for="numero-medida">Não</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="numero-medida" value="NS">
+                    <label for="numero-medida">Não sei</label>
+                </div>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="tem-processo" class="label">A violência está sendo investigada? Tem processo?</label>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="S">
+                    <label for="tem-processo">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="N">
+                    <label for="tem-processo">Não</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="NS">
+                    <label for="tem-processo">Não sei</label>
+                </div>
+            </div>
+            <div class="c-12 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="cadastro">
+                    <label for="cadastro"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                </div>
+            </div>
+
+            
+            <div class="subtitle-number">
+                <span>04</span><h2>Documentos</h2>
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="documento" class="label">Você quer enviar algum documento ou imagem para complementar sua
+                    Violência contra Mulher?
+                </label>
+                Atenção: você só poderá enviar no máximo cinco arquivos, ok?
+                <input type="file" name="documento" />
+                <br>Observações:<br><br>
+                - O arquivo não deve possuir mais do que 20 MB.<br>
+                - O nome do arquivo não deve possuir mais de 150 caracteres.<br>
+                - Formatos permitidos: Imagem, PDF, Documentos com Texto, Áudio e Vídeo.<br>
+
+            </div>
+
+            <div class="c-12 form-group">
+                <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
+                    dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
+                    </label>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="S">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="termo" value="N">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
+        </div>
 
         <!---->
         <div id="aviso-obrigatoriedade" class="c-12">

@@ -51,7 +51,7 @@ window.onload = function () {
             atual.style.display = 'contents';
             document.querySelector("#vai-identificar").style.display = 'contents';
 
-            if (radioButton.value === "solicitacao-certidao" || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd") {
+            if (radioButton.value === "solicitacao-certidao" || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd"  || radioButton.value === "violence-contra-mulher") {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
             }else {
@@ -89,7 +89,7 @@ window.onload = function () {
             if (radioButton.value === 'elogio') {
                 document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
             }
-            if (radioButton.value === 'solicitacao-certidao' || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd") {
+            if (radioButton.value === 'solicitacao-certidao' || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd" || radioButton.value === "violence-contra-mulher" ) {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
             }
