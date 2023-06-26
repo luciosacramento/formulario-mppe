@@ -119,8 +119,13 @@ window.onload = function () {
         });
     }
     
-    document.querySelector("select[name='tipo-pessoa']").addEventListener('change', function () {        
-        ChangeTipoPessoa(this.value);
+    
+    var all = document.querySelectorAll("select[name='tipo-pessoa']");
+    all.forEach(function (element) {
+        element.addEventListener('change', function () {       
+            console.log(document.querySelector("select[name='tipo-pessoa']")); 
+            ChangeTipoPessoa(this.value);
+        }); 
     });
 
     /*Tornando visível todos os Boxes de identificação*/

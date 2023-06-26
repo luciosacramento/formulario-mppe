@@ -18,7 +18,7 @@
             <form>
                 <div class="radio-group">
                     <div class="radio-group">
-                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher" checked>
+                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher" >
                         <label for="violence-against-women">Violência contra a mulher</label>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao">
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao" checked>
                     <label for="solicitacao-certidao">Solicitação de Certidão</label>
                 </div>
 
@@ -114,6 +114,24 @@
             <!--identificada-->
             <div id="identificada" class="div-show-hide-identificar div-show-hide">
                 <h2 class="subtitle">Identificação do Manifestante</h2>
+
+                <div class="c-3 form-group">
+                    <label for="tipo-pessoa" class="label">Tipo Pessoa</label>
+                    <select name="tipo-pessoa" >
+                        <option value="pessoa-fisica">Pessoal Física</option>
+                        <option value="pessoa-juridica">Pessoal Jurídica</option>
+                    </select>
+                </div>
+    
+                <div class="c-3 form-group pessoa-fisica">
+                    <label for="cpf" class="label" alt="Somente números.">CPF</label>
+                    <input type="text" name="cpf" />
+                </div>
+    
+                <div class="c-3 form-group pessoa-fisica">
+                    <label for="nome" class="label">Nome</label>
+                    <input type="text" name="nome" />
+                </div>
          
                 <div class="c-3 form-group">
                     <label for="email" class="label">E-mail</label>
@@ -329,7 +347,7 @@
             </div>
 
             <div class="c-12 form-group">
-                <label for="relato-insatisfacao" class="label">Agora nos conte o que o deixou satisfeito com o MPPE</label>
+                <label for="relato-insatisfacao" class="label" alt="Por favor, não esqueça de nos informar quem deseja elogiar, qual fato o deixou satisfeito e onde essa situação se passou.">Agora nos conte o que o deixou satisfeito com o MPPE</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
  
@@ -811,13 +829,32 @@
                 Observações:<br>
                 O arquivo não deve possuir mais do que 20 MB
             </div>
+
+            <div class="pessoa-fisica">
+                <div class="subtitle-number">
+                    <span>04</span><h2>Em nome de...</h2>
+                </div>
+            </div>
+
+            <div class="c-12 form-group pessoa-fisica">
+                <label for="confirmacao_email" class="label">A certidão será emitida em nome de</label>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tipo-contato" value="celular">
+                    <label for="celular">Não</label>
+                </div>
+            </div>
+
             <div class="pessoa-juridica">
                 <div class="subtitle-number">
                     <span>04</span><h2>Filiais</h2>
                 </div>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group pessoa-juridica">
                 <label for="confirmacao_email" class="label">Deseja emitir a mesma certidão para as filiais do estabelecimento?</label>
                 <div class="radio-group">
                     <input type="radio" name="tipo-contato" value="celular">
@@ -828,7 +865,7 @@
                     <label for="celular">Não</label>
                 </div>
             </div>
-            <div class="c-12 form-group">
+            <div class="c-12 form-group pessoa-juridica">
                 Atenção: É obrigatório inserir um CNPJ para cada filial que solicitar a certidão e deve ser relacionado ao CNPJ da filial.
                     <br> <br>
             </div>
@@ -866,7 +903,7 @@
             </div>
             <div class="pessoa-fisica">
                 <div class="subtitle-number">
-                    <span>03</span><h2>Documentos - CPF do Titular e Procuração</h2>
+                    <span>04</span><h2>Documentos - CPF do Titular e Procuração</h2>
                 </div>
             </div>
 
@@ -1027,6 +1064,13 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
 
+            <div class="c-3 form-group">
+                <label for="municipio" class="label">Municipio</label>
+                <select name="municipio" >
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+
             <div class="subtitle-number">
                 <span>03</span><h2>Descrição</h2>
             </div>
@@ -1036,31 +1080,15 @@ fornecê-los em arquivos separados<br> <br>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
-            <div class="c-3 form-group">
-                <label for="municipio" class="label">Municipio</label>
-                <select name="municipio" >
-                    <option value="">Selecione</option>
-                </select>
-            </div>
-
+            
             <div class="subtitle-number">
-                <span>04</span><h2>Documentos</h2>
+                <span>04</span><h2>Envio de fotos e documentos</h2>
             </div>
-
             <div class="c-12 form-group">
-                <label for="documento" class="label">Você quer enviar algum documento ou imagem para complementar sua
-                    denúncia?                
+                <label for="local" class="label">Você quer enviar algum documento ou imagem para complementar sua Denúncia?                
                 </label>
-                Atenção: você só poderá enviar no máximo dois arquivos, ok?<br> <br>
-                <label for="documento" class="label">Primeiro Arquivo</label>
-                <input type="file" name="documento" /><br><br>
-                <label for="documento" class="label">Segundo Arquivo</label>
-                <input type="file" name="documento" />
-                <br>Observações:<br><br>
-                - O arquivo não deve possuir mais do que 20 MB.<br>
-                - O nome do arquivo não deve possuir mais de 150 caracteres.<br>
-                - Formatos permitidos: Imagem, PDF, Documentos com Texto, Áudio e Vídeo.<br>
-
+                Atenção: você só poderá enviar no máximo cinco arquivos, ok?<br> <br>
+                <input type="file" name="local" />
             </div>
 
             <div class="c-12 form-group">
@@ -1076,7 +1104,6 @@ fornecê-los em arquivos separados<br> <br>
                     <label for="celular">Não</label>
                 </div>
             </div>
-
         </div>
         
         <!--solicitacao-lgpd-->
