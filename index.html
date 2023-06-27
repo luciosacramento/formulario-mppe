@@ -15,10 +15,10 @@
     <div class="container">
         <div class="c-12">
             <h2 class="subtitle">O que seria sua manifestação?</h2>
-            <form>
+            <form id="que_seria_manifestacao">
                 <div class="radio-group">
                     <div class="radio-group">
-                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher" >
+                        <input type="radio" name="tipo-manifestacao" value="violence-contra-mulher" checked>
                         <label for="violence-against-women">Violência contra a mulher</label>
                     </div>
                 </div>
@@ -54,17 +54,17 @@
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao" checked>
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-certidao" >
                     <label for="solicitacao-certidao">Solicitação de Certidão</label>
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd">
+                    <input type="radio" name="tipo-manifestacao" value="solicitacao-lgpd" >
                     <label for="solicitacao-lgpd">Solicitação LGPD</label>
                 </div>
 
                 <div class="radio-group">
-                    <input type="radio" name="tipo-manifestacao" value="incidente-seguranca">
+                    <input type="radio" name="tipo-manifestacao" value="incidente-seguranca" >
                     <label for="incidente-seguranca">Incidente de Segurança de Dados Pessoais</label>
                 </div>
             </form>
@@ -903,7 +903,7 @@
             </div>
             <div class="pessoa-fisica">
                 <div class="subtitle-number">
-                    <span>04</span><h2>Documentos - CPF do Titular e Procuração</h2>
+                    <span>05</span><h2>Documentos - CPF do Titular e Procuração</h2>
                 </div>
             </div>
 
@@ -916,20 +916,21 @@ documento devem estar legíveis (número, nome e data de nascimento). Não é ob
 fornecê-los em arquivos separados<br> <br>
                 <input type="file" name="documento" />
             </div>
-            <div class="c-12 form-group">
+            <div class="c-12 form-group ">
                 <div class="checkbox">
                     <input type="checkbox" id="vinculada2">
                     <label for="vinculada2"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
                 </div>
             </div>
             <div class="c-12 form-group">
-                <div class="checkbox">
-                    <input type="checkbox" id="veracidade">
-                    <label for="veracidade"><span>Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
-                        omitir, em documento público ou particular, declaração que devia constar, ou nele
-                        inserir ou fazer declaração falsa ou diversa que devia ser escrita, [...], é crime.
-                        Concordo</span></label>
-                </div>
+                <span class="label">Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
+                    omitir, em documento público ou particular, declaração que devia constar, ou nele
+                    inserir ou fazer declaração falsa ou diversa que devia ser escrita, [...], é crime.
+                    </span>
+                    <div class="checkbox required">
+                        <input type="checkbox" id="concordo-crime" name="concordo-crime">
+                        <label for="concordo-crime"><span>Concordo.</span></label>
+                    </div>
             </div>
             <div class="c-12 form-group">
                 <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
@@ -1162,8 +1163,8 @@ fornecê-los em arquivos separados<br> <br>
                 <span>03</span><h2>Natureza</h2>
             </div>
 
-            <div class="c-12 form-group pessoa-fisica">
-                <label for="esolaridade" class="label">*Natureza da Solicitação</label>
+            <div class="c-12 form-group pessoa-fisica" id="natueza_solicitacao_radio">
+                <label for="esolaridade" class="label required">*Natureza da Solicitação</label>
                 <div class="radio-group">
                     <input type="radio" name="termo" value="1">
                     <label for="celular">Confirmação de que há tratamento de meus dados pessoais no MPPE</label>
@@ -1396,7 +1397,34 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
             <div class="subtitle-number">
-                <span>03</span><h2>O Agressor</h2>
+                <span>03</span><h2>Quando e onde?</h2>
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
+                </label>
+                <input type="date" name="periodo" />
+            </div>
+            <div class="c-6 form-group">
+                <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
+                </label>
+                <input type="text" name="local" />
+            </div>
+            <div class="c-3 form-group">
+                <label for="municipio" class="label">Município onde os fatos aconteceram
+                </label>
+                <select name="municipio" >
+                    <option value="Selecione">Selecione</option>
+                </select>
+            </div>
+            <div class="c-12 form-group">
+                <div class="checkbox">
+                    <input type="checkbox" id="vinculada">
+                    <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                </div>
+            </div>
+            <div class="subtitle-number">
+                <span>04</span><h2>O Agressor</h2>
             </div>
             <div class="c-3 form-group pessoa-fisica">
                 <label for="nome-agressor" class="label">Nome do(a) agressor(a)</label>
@@ -1415,7 +1443,7 @@ fornecê-los em arquivos separados<br> <br>
             <img src="img/muher_03.jpg">
 
             <div class="subtitle-number">
-                <span>04</span><h2>Histórico jurídico</h2>
+                <span>05</span><h2>Histórico jurídico</h2>
             </div>
             <div class="c-3 form-group">
                 <label for="medida-protetiva" class="label">Já existe alguma medida protetiva em favor da vítima?
@@ -1473,7 +1501,7 @@ fornecê-los em arquivos separados<br> <br>
 
             
             <div class="subtitle-number">
-                <span>04</span><h2>Documentos</h2>
+                <span>06</span><h2>Documentos</h2>
             </div>
 
             <div class="c-12 form-group">

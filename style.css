@@ -141,6 +141,10 @@ hr {
   font-weight: 300;
 }
 
+#que_seria_manifestacao .radio-group{
+  display: inline-flex;
+}
+
 input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -151,6 +155,8 @@ input[type="radio"] {
   border: 2px solid #ccc;
   outline: none;
   transition: border-color 0.2s ease-in-out;
+  flex: none;
+  margin: 0 10px;
 }
 
 input[type="radio"]:checked {
@@ -172,8 +178,8 @@ input[type="radio"]:checked + label::before {
   margin-right: 0px;
   vertical-align: middle;
   position: absolute;
-  margin-left: -14px;
-  margin-top: 7px;
+  margin-left: -21px;
+  margin-top: 4px;
 }
 
 .radio-group-identify{
@@ -184,9 +190,10 @@ input[type="radio"]:checked + label::before {
 }
 
 .radio-group{
-  display: inline-table;
+  display: flex;
   font-weight: 100;
   margin: 0 5px  5px  0;
+  align-items: flex-start;
 }
 
 .radio-group-identify h2{
@@ -203,14 +210,21 @@ input[type="radio"]:checked + label::before {
   color: #fff;
 }
 
+.radio-group-identify input{
+  margin-top: 10px;
+}
+
 .radio-group-identify.checked input[type="radio"]:checked {
   border-color: #fff; 
 }
 
 .radio-group-identify.checked input[type="radio"]:checked + label::before {
 
-  background-color: #fff;
-  margin-left: -14px;
+background-color: #fff;
+
+margin-left: -21px;
+
+margin-top: 14px;
 }
 
 .container {
@@ -264,6 +278,10 @@ input[type="radio"]:checked + label::before {
   #aviso-obrigatoriedade{
     text-align: right;
     font-size: 14px;
+  }
+
+  #natueza_solicitacao_radio .radio-group{
+    margin-bottom: 20px;
   }
 
    /* Tooltip styles */
