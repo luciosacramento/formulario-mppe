@@ -51,7 +51,7 @@ header{
     margin: 0 auto;
 }
 
-.div-show-hide,.div-show-hide-from, #vai-identificar-form{
+.div-show-hide,.div-show-hide-from, #vai-identificar-form, .row{
   width: 100%;
   display: contents;
 }
@@ -269,7 +269,8 @@ margin-top: 14px;
     color: #666;
   }
 
-  .form-group input[type='text'], .form-group input[type='email'], .form-group input[type='tel'],.form-group select, .form-group input[type='date']{
+  .form-group input[type='text'], .form-group input[type='email'], .form-group input[type='tel'],
+  .form-group select, .form-group input[type='date']{
     border: 0px;
     border-bottom: 1px solid #90B79F;
     width: 100%;
@@ -289,7 +290,6 @@ margin-top: 14px;
     position: relative;
     display: inline-block;
     cursor: pointer;
-    padding-left: 25px;
   }
 
   .tooltip::before {
@@ -304,7 +304,7 @@ margin-top: 14px;
       padding: 2px;
       color: #fff;
       font-weight: 700;
-      left: 0;
+      right: 0;
       margin-top: -2px;
   }
 
@@ -365,25 +365,22 @@ margin-top: 14px;
   text-align: right;
 }
   
-.required{
-  background: #92bad1;
-  display: table !important;
-  width: auto;
-  padding: 5px;
-  border-radius: 5px;
-  position: relative;
+.required textarea,.required input[type='text'],.required input[type='email']
+,.required input[type='tel'],.required input[type='date'], .required select
+
+{
+  border-left: 4px solid #477fa0;
 }
 
-.required::after{
-  content: 'obrigatório';
+.required>label::before,.required span>label::before{
+  content: '*';
   position: absolute;
-  right: 10px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 10px;
-  margin-top: 3px;
-  color: #ffffff;
-  text-shadow: 0px 2px #6b1b1b;
+  font-size: 20px;
+  margin-top: 0;
+  margin-left: -10px;
+  color: #477fa0;
 }
   
   

@@ -73,6 +73,50 @@
         <div class="subtitle-number" id="subtitle-descricao">
             <span>01</span><h2>Descrição</h2>
         </div>
+        
+        <div id="voce-pessoa" class="c-12 form-group required">
+            <label for="quem-sofre " class="label">Você é a pessoa que está sofrendo violência?</label>
+            <div class="radio-group">
+                <input type="radio" name="quem-sofre" value="S" checked>
+                <label for="celular">Sim</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="quem-sofre" value="N" >
+                <label for="celular">Não</label>
+            </div>
+        </div>
+
+
+        <!--Sim,eu sofro a violencia
+        <div id="sofro-violencia" class="row">
+            <div class="c-3 form-group required">
+                <label for="nome" class="label">Qual o seu nome?</label>
+                <input type="text" name="nome" />
+            </div>
+            <div class="c-3 form-group required">
+                <label for="telefone" class="label">Qual o seu telefone para contato?</label>
+                <input type="tel" name="telefone"/>
+            </div>
+    
+            <div class="c-3 form-group required">
+                <div class="checkbox">
+                    <input type="checkbox" id="whatsapp">
+                    <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                  </div>
+            </div>
+     
+            <div class="c-3 form-group">
+                <label for="email" class="label">Qual o seu e-mail?</label>
+                <input type="email" name="email" />
+            </div>
+            <div class="c-3 form-group required">
+                <label for="endereco-completo" class="label" alt="Nome da rua ou avenida, número da casa, número do apartamento ou referência">Qual o seu endereço completo?</label>
+                <input type="text" name="endereco-completo" />
+            </div>
+
+        </div>-->
+
+
         <!--Você vai se identificar-->
         <div id="vai-identificar" class="div-show-hide">
             <h2 class="subtitle">* Você vai se identificar?</h2>
@@ -111,6 +155,7 @@
         </div>
 
         <div id="vai-identificar-form">
+
             <!--identificada-->
             <div id="identificada" class="div-show-hide-identificar div-show-hide">
                 <h2 class="subtitle">Identificação do Manifestante</h2>
@@ -126,6 +171,16 @@
                 <div class="c-3 form-group pessoa-fisica">
                     <label for="cpf" class="label" alt="Somente números.">CPF</label>
                     <input type="text" name="cpf" />
+                </div>
+
+                <div class="c-3 form-group pessoa-juridica">
+                    <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
+                    <input type="text" name="cnpj" />
+                </div>
+
+                <div class="c-3 form-group pessoa-juridica">
+                    <label for="nome" class="label">Nome</label>
+                    <input type="text" name="nome" />
                 </div>
     
                 <div class="c-3 form-group pessoa-fisica">
@@ -171,13 +226,40 @@
             <!--sigilosa-->
             <div id="sigilosa" class="div-show-hide-identificar div-show-hide">
     
-                <h2 class="subtitle">Por que você precisa que seus dados fiquem sigilosos?</h2>
-    
                 <div class="c-12 form-group">
+                    <label for="porque-sigiloso" class="label">Por que você precisa que seus dados fiquem sigilosos?</label>
                     <textarea name="porque-sigiloso"  cols="30" rows="10"></textarea>
                 </div>
     
                 <h2 class="subtitle">Identificação do Manifestante</h2>
+         
+                <div class="c-3 form-group">
+                    <label for="tipo-pessoa" class="label">Tipo Pessoa</label>
+                    <select name="tipo-pessoa" >
+                        <option value="pessoa-fisica">Pessoal Física</option>
+                        <option value="pessoa-juridica">Pessoal Jurídica</option>
+                    </select>
+                </div>
+    
+                <div class="c-3 form-group pessoa-fisica required">
+                    <label for="cpf" class="label" alt="Somente números.">CPF</label>
+                    <input type="text" name="cpf" />
+                </div>
+
+                <div class="c-3 form-group pessoa-juridica required">
+                    <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
+                    <input type="text" name="cnpj" />
+                </div>
+
+                <div class="c-3 form-group pessoa-juridica required">
+                    <label for="nome" class="label">Nome</label>
+                    <input type="text" name="nome" />
+                </div>
+    
+                <div class="c-3 form-group pessoa-fisica required">
+                    <label for="nome" class="label">Nome</label>
+                    <input type="text" name="nome" />
+                </div>
          
                 <div class="c-3 form-group">
                     <label for="email" class="label">E-mail</label>
@@ -216,9 +298,9 @@
             </div>
             <!--anonima-->
             <div id="anonima" class="div-show-hide-identificar div-show-hide">
-                <h2 class="subtitle">Por que necessita realizar sua manifestação sem se identificar?</h2>
-    
+               
                 <div class="c-12 form-group">
+                    <label for="porque-anonimo" class="label">Por que necessita realizar sua manifestação sem se identificar?</label>
                     <textarea name="porque-anonimo"  cols="30" rows="10"></textarea>
                 </div>
     
@@ -258,6 +340,100 @@
                         <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
                       </div>
                 </div>
+            </div>
+
+            <!--identificada-->
+            <div id="identificada-mulher" class="div-show-hide-identificar div-show-hide">
+                <h2 class="subtitle">Identificação do Manifestante</h2>
+    
+                <div class="c-3 form-group pessoa-fisica">
+                    <label for="nome" class="label">Qual o seu nome?</label>
+                    <input type="text" name="nome" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Qual o seu telefone?</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
+                </div>
+         
+                <div class="c-3 form-group">
+                    <label for="email" class="label">Qual o seu e-mail?</label>
+                    <input type="email" name="email" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
+                    <input type="email" name="confirmacao_email" />
+                </div>              
+        
+            </div>
+            <!--sigilosa-->
+            <div id="sigilosa-mulher" class="div-show-hide-identificar div-show-hide">
+                
+                <div class="c-12 form-group">
+                    <label for="porque-sigiloso" class="label">Por que você precisa que seus dados fiquem sigilosos?</label>
+                    <textarea name="porque-sigiloso"  cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="c-3 form-group pessoa-fisica required">
+                    <label for="nome" class="label">Qual o seu nome?</label>
+                    <input type="text" name="nome" />
+                </div>
+      
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Telefone</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
+                </div>
+                <div class="c-3 form-group">
+                    <label for="email" class="label">Qual o seu e-mail?</label>
+                    <input type="email" name="email" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
+                    <input type="email" name="confirmacao_email" />
+                </div>    
+            </div>
+            <!--anonima-->
+            <div id="anonima-mulher" class="div-show-hide-identificar div-show-hide">
+                                
+                <div class="c-12 form-group">
+                    <label for="porque-anonimo" class="label">Por que necessita realizar sua manifestação sem se identificar?</label>
+                    <textarea name="porque-anonimo"  cols="30" rows="10"></textarea>
+                </div>
+    
+                <h2 class="subtitle">Identificação do Manifestante</h2>
+               
+                <div class="c-3 form-group">
+                    <label for="telefone" class="label">Qual o seu telefone?</label>
+                    <input type="tel" name="telefone"/>
+                </div>
+        
+                <div class="c-3 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="whatsapp">
+                        <label for="whatsapp"><span>Esse número é WhatsApp?</span></label>
+                      </div>
+                </div>
+                <div class="c-3 form-group">
+                    <label for="email" class="label">Qual o seu e-mail?</label>
+                    <input type="email" name="email" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="confirmacao_email" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
+                    <input type="email" name="confirmacao_email" />
+                </div>    
             </div>
         </div>
         <!--form denuncia-->
@@ -323,7 +499,7 @@
                 <input type="file" name="local" />
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
                     dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo</a>
                     </label>
@@ -346,7 +522,7 @@
                 <span>02</span><h2>O que aconteceu?</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-insatisfacao" class="label" alt="Por favor, não esqueça de nos informar quem deseja elogiar, qual fato o deixou satisfeito e onde essa situação se passou.">Agora nos conte o que o deixou satisfeito com o MPPE</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
@@ -412,12 +588,12 @@
                 <span>02</span><h2>O que aconteceu?</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-insatisfacao" class="label" alt="Por favor, não esqueça de nos explicar como e onde os fatos se passaram. E, quando informar os nomes das pessoas, também é importante indicar quais os seus cargos.">Agora nos conte o que o deixou satisfeito com o MPPE</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
                 <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
@@ -483,14 +659,14 @@
                 <span>02</span><h2>O que aconteceu?</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-insatisfacao" class="label" alt="
                 Por favor, não esqueça de nos explicar como e onde os fatos se passaram. E, quando informar os nomes das pessoas, também é importante indicar quais os seus cargos.
                 ">Agora nos conte o que o deixou satisfeito com o MPPE</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
                 <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
@@ -556,13 +732,13 @@
                 <span>02</span><h2>O que aconteceu?</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-incidente" class="label">Agora nos conte qual incidente deseja reportar
                 </label>
                 <textarea name="relato-incidente"  cols="30" rows="10"></textarea>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
                 <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
@@ -620,13 +796,13 @@
                 <span>02</span><h2>O que aconteceu?</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-melhoras" class="label">Agora nos conte como podemos melhorar os serviços do Ministério Público
                 </label>
                 <textarea name="relato-melhoras"  cols="30" rows="10"></textarea>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="o-que-espera" class="label">Coloque aqui o que você espera do Ministério Público</label>
                 <textarea name="o-que-espera"  cols="30" rows="10"></textarea>
             </div>
@@ -695,17 +871,17 @@
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="nome" class="label">Nome</label>
                 <input type="text" name="nome" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="sexo" class="label">Sexo</label>
                 <select name="sexo" >
                     <option value="masculino">Masculino</option>
@@ -713,32 +889,32 @@
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
                 <input type="text" name="cnpj" />
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="razao-social" class="label">Razão Social</label>
                 <input type="text" name="razao-social" />
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="nome-fantasia" class="label">Nome Fantasia</label>
                 <input type="text" name="nome-fantasia" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="data-nascimento" class="label" alt="Ex:24/11/2012">Data de Nascimento
                 </label>
                 <input type="date" name="data-nascimento" />
             </div>
      
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="email" class="label">E-mail</label>
                 <input type="email" name="email" />
             </div>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
                 <input type="email" name="confirmacao_email" />
             </div>
@@ -869,12 +1045,12 @@
                 Atenção: É obrigatório inserir um CNPJ para cada filial que solicitar a certidão e deve ser relacionado ao CNPJ da filial.
                     <br> <br>
             </div>
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
                 <input type="text" name="cnpj" />
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="documento-cnpj-filial" class="label">Documento CNPJ                
                 </label>
                 <input type="file" name="documento-cnpj-filial" />
@@ -886,17 +1062,17 @@
 
             <hr>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="cpf-titular" class="label" alt="Somente números.">CPF do Titular </label>
                 <input type="text" name="cpf-titular" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="nome-titular" class="label">Nome do Titular</label>
                 <input type="text" name="nome-titular" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="data-nascimento-titular" class="label" alt="Ex:24/11/2012">Data de Nascimento do Titular
                 </label>
                 <input type="date" name="data-nascimento-titular" />
@@ -922,8 +1098,8 @@ fornecê-los em arquivos separados<br> <br>
                     <label for="vinculada2"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
                 </div>
             </div>
-            <div class="c-12 form-group">
-                <span class="label required">Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
+            <div class="c-12 form-group required">
+                <span class="label">Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
                     omitir, em documento público ou particular, declaração que devia constar, ou nele
                     inserir ou fazer declaração falsa ou diversa que devia ser escrita, [...], é crime.
                     </span>
@@ -959,17 +1135,17 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="nome" class="label">Nome</label>
                 <input type="text" name="nome" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="sexo" class="label">Sexo</label>
                 <select name="sexo" >
                     <option value="masculino">Masculino</option>
@@ -977,32 +1153,32 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
                 <input type="text" name="cnpj" />
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="razao-social" class="label">Razão Social</label>
                 <input type="text" name="razao-social" />
             </div>
 
-            <div class="c-3 form-group pessoa-juridica">
+            <div class="c-3 form-group pessoa-juridica required">
                 <label for="nome-fantasia" class="label">Nome Fantasia</label>
                 <input type="text" name="nome-fantasia" />
             </div>
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="data-nascimento" class="label" alt="Ex:24/11/2012">Data de Nascimento
                 </label>
                 <input type="date" name="data-nascimento" />
             </div>
      
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="email" class="label">E-mail</label>
                 <input type="email" name="email" />
             </div>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
                 <input type="email" name="confirmacao_email" />
             </div>
@@ -1076,7 +1252,7 @@ fornecê-los em arquivos separados<br> <br>
                 <span>03</span><h2>Descrição</h2>
             </div>
 
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="relato-insatisfacao" class="label" >Solicitação</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
@@ -1112,21 +1288,21 @@ fornecê-los em arquivos separados<br> <br>
             <div class="subtitle-number">
                 <span>01</span><h2>Identificação do Manifestante</h2>
             </div>
-            <div class="c-6 form-group ">
+            <div class="c-6 form-group required">
                 <label for="nome" class="label">Nome</label>
                 <input type="text" name="nome" />
             </div>
 
-            <div class="c-3 form-group ">
+            <div class="c-3 form-group required">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
      
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="email" class="label">E-mail</label>
                 <input type="email" name="email" />
             </div>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="confirmacao_email" class="label">Confirmação de E-mail</label>
                 <input type="email" name="confirmacao_email" />
             </div>
@@ -1163,8 +1339,8 @@ fornecê-los em arquivos separados<br> <br>
                 <span>03</span><h2>Natureza</h2>
             </div>
 
-            <div class="c-12 form-group pessoa-fisica" id="natueza_solicitacao_radio">
-                <label for="esolaridade" class="label required">*Natureza da Solicitação</label>
+            <div class="c-12 form-group pessoa-fisica required" id="natueza_solicitacao_radio">
+                <label for="esolaridade" class="label">Natureza da Solicitação</label>
                 <div class="radio-group">
                     <input type="radio" name="termo" value="1">
                     <label for="celular">Confirmação de que há tratamento de meus dados pessoais no MPPE</label>
@@ -1204,8 +1380,8 @@ fornecê-los em arquivos separados<br> <br>
                 
             </div>
 
-            <div class="c-12 form-group ">
-                <label for="tratamento" class="label">*O tratamento de dados pessoais normalmente envolve um grande número de setores
+            <div class="c-12 form-group required">
+                <label for="tratamento" class="label">O tratamento de dados pessoais normalmente envolve um grande número de setores
                     do Ministério Público de Pernambuco. Assim, precisamos que nos indique abaixo o
                     setor sobre o qual deseja informações ou alguma ação referente ao tratamento dos
                     seus dados pessoais no MPPE.</label>
@@ -1225,8 +1401,8 @@ fornecê-los em arquivos separados<br> <br>
                 <span>04</span><h2>Documentos</h2>
             </div>
 
-            <div class="c-12 form-group">
-                <label for="documento" class="label required">*Envie por aqui uma foto sua, segurando seu documento oficial de identificação com
+            <div class="c-12 form-group required">
+                <label for="documento" class="label">Envie por aqui uma foto sua, segurando seu documento oficial de identificação com
                     foto, de forma que possamos conferir sua identidade. 
                     
                 </label>
@@ -1242,13 +1418,20 @@ fornecê-los em arquivos separados<br> <br>
                 <label for="confirmacao_email" class="label">Para finalizar, agora precisamos que responda se você concorda com os termos de uso
                     dos seus dados pessoais pelo MPPE: <a href="https://portal.mppe.mp.br/lgpd">termo LGPD</a>
                     </label>
+
+            </div>
+
+            <div class="c-12 form-group required">
+                <label for="deseja-aceitar" class="label">
+                    Deseja aceitar nossos Termos de Uso?
+                </label>
                 <div class="radio-group">
-                    <input type="radio" name="termo" value="S">
-                    <label for="celular">Sim</label>
+                    <input type="radio" name="deseja-aceitar" value="S">
+                    <label for="deseja-aceitar">Sim</label>
                 </div>
                 <div class="radio-group">
-                    <input type="radio" name="termo" value="N">
-                    <label for="celular">Não</label>
+                    <input type="radio" name="deseja-aceitar" value="N">
+                    <label for="deseja-aceitar">Não</label>
                 </div>
             </div>
 
@@ -1260,32 +1443,32 @@ fornecê-los em arquivos separados<br> <br>
             <div class="c-12">
                 <img src="img/muher_01.jpg" >
             </div>
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="o-que-esta-acontacendo" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
                 campo
                 ">Agora nos conte o que está acontecendo?</label>
                 <textarea name="o-que-esta-acontacendo"  cols="30" rows="10"></textarea>
             </div>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
                 </label>
                 <input type="date" name="periodo" />
             </div>
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="local" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
                 campo
                 ">Em que local específico, empresa ou instituição os fatos se passaram (Descreva)?
             </label>
                 <textarea name="local"  cols="30" rows="10"></textarea>
             </div>
-            <div class="c-3 form-group">
+            <div class="c-12 form-group required">
                 <label for="municipio" class="label">Município onde os fatos aconteceram</label>
                 <select name="municipio" >
                     <option value="">Selecione</option>
                 </select>
             </div>
             <img src="img/muher_02.jpg" >
-            <div class="c-12 form-group">
+            <div class="c-12 form-group required">
                 <label for="local" class="label" alt="Toda mulher tem o direito de procurar a Promotora ou o Promotor de Justiça da
                 sua comarca e pedir esclarecimentos sobre o processo que iniciou, narrar
                 detalhes da violência que sofreu, apresentar provas e pedir apoio.
@@ -1298,19 +1481,8 @@ fornecê-los em arquivos separados<br> <br>
                 <span>02</span><h2>Quem sofreu ou sofre a violência</h2>
             </div>
 
-            <div class="c-12 form-group">
-                <label for="quem-sofre " class="label required">Você é a pessoa que está sofrendo violência?</label>
-                <div class="radio-group">
-                    <input type="radio" name="quem-sofre" value="S">
-                    <label for="celular">Sim</label>
-                </div>
-                <div class="radio-group">
-                    <input type="radio" name="quem-sofre" value="N">
-                    <label for="celular">Não</label>
-                </div>
-            </div>
 
-            <div class="c-6 form-group">
+            <!--div class="c-6 form-group">
                 <label for="desejo-identificar" class="label">Como deseja realizar sua manifestação de Violência contra Mulher?</label>
                 <select name="desejo-identificar" >
                     <option value="">Desejo me identificar</option>
@@ -1339,14 +1511,14 @@ fornecê-los em arquivos separados<br> <br>
             <div class="c-3 form-group">
                 <label for="confirmacao_email" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
                 <input type="email" name="confirmacao_email" />
-            </div>
+            </div-->
 
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="nome-vitima" class="label">Nome da vítima</label>
                 <input type="text" name="nome-vitima" />
             </div>
 
-            <div class="c-6 form-group pessoa-fisica">
+            <div class="c-6 form-group pessoa-fisica required">
                 <label for="telefone-vitima" class="label">Qual telefone da vítima para contato?</label>
                 <input type="tel" name="telefone-vitima" />
             </div>
@@ -1361,15 +1533,11 @@ fornecê-los em arquivos separados<br> <br>
                 </label>
                 <input type="email" name="email-vitima" />
             </div>
-            <div class="c-3 form-group">
-                <label for="confirmacao_email-vitima" class="label">Por favor, digite novamente o seu e-mail para confirmação:</label>
-                <input type="email" name="confirmacao_email-vitima" />
-            </div>
-            <div class="c-3 form-group pessoa-fisica">
+            <div class="c-3 form-group pessoa-fisica required">
                 <label for="endereco-vitima" class="label" alt="Nome da rua ou avenida, número da casa, número do apartamento ou referência">Qual o endereço completo da vítima?</label>
                 <input type="text" name="endereco-vitima" />
             </div>
-            <div class="c-3 form-group">
+            <div class="c-3 form-group required">
                 <label for="municipio-vitima" class="label">Em qual cidade reside a vítima?</label>
                 <select name="municipio-vitima" >
                     <option value="">Selecione</option>
@@ -1386,8 +1554,8 @@ fornecê-los em arquivos separados<br> <br>
                     <label for="pessoa-com-deficiencia-vitima">Não</label>
                 </div>
             </div>
-            <div class="c-3 form-group">
-                <label for="local-vitima" class="label required">Em que local os fatos ocorreram?</label>
+            <div class="c-3 form-group required">
+                <label for="local-vitima" class="label ">Em que local os fatos ocorreram?</label>
                 <select name="local-vitima" >
                     <option value="">Na minha casa</option>
                     <option value="">No meu trabalho</option>
@@ -1396,35 +1564,10 @@ fornecê-los em arquivos separados<br> <br>
                     <option value="">Outros</option>
                 </select>
             </div>
-            <div class="subtitle-number">
-                <span>03</span><h2>Quando e onde?</h2>
-            </div>
 
-            <div class="c-3 form-group">
-                <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
-                </label>
-                <input type="date" name="periodo" />
-            </div>
-            <div class="c-6 form-group">
-                <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
-                </label>
-                <input type="text" name="local" />
-            </div>
-            <div class="c-3 form-group">
-                <label for="municipio" class="label">Município onde os fatos aconteceram
-                </label>
-                <select name="municipio" >
-                    <option value="Selecione">Selecione</option>
-                </select>
-            </div>
-            <div class="c-12 form-group">
-                <div class="checkbox">
-                    <input type="checkbox" id="vinculada">
-                    <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
-                </div>
-            </div>
+            
             <div class="subtitle-number">
-                <span>04</span><h2>O Agressor</h2>
+                <span>03</span><h2>O Agressor</h2>
             </div>
             <div class="c-3 form-group pessoa-fisica">
                 <label for="nome-agressor" class="label">Nome do(a) agressor(a)</label>
@@ -1439,6 +1582,36 @@ fornecê-los em arquivos separados<br> <br>
                 </label>
                 <input type="tel" name="telefone-agressor" />
             </div>
+
+            <!--div class="quemSofreShowHide">
+                <div class="subtitle-number">
+                    <span>04</span><h2>Quando e onde?</h2>
+                </div>
+    
+                <div class="c-3 form-group">
+                    <label for="periodo" class="label" alt="Ex:24/11/2012">Em que período ou data os fatos aconteceram?
+                    </label>
+                    <input type="date" name="periodo" />
+                </div>
+                <div class="c-6 form-group">
+                    <label for="local" class="label">Em que local específico, empresa ou instituição os fatos se passaram?
+                    </label>
+                    <input type="text" name="local" />
+                </div>
+                <div class="c-3 form-group">
+                    <label for="municipio" class="label">Município onde os fatos aconteceram
+                    </label>
+                    <select name="municipio" >
+                        <option value="Selecione">Selecione</option>
+                    </select>
+                </div>
+                <div class="c-12 form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="vinculada">
+                        <label for="vinculada"><span>Esta manifestação é vinculada a outra já cadastrada?</span></label>
+                    </div>
+                </div>
+            </div-->
 
             <img src="img/muher_03.jpg">
 
@@ -1517,8 +1690,8 @@ fornecê-los em arquivos separados<br> <br>
 
             </div>
 
-            <div class="c-12 form-group">
-                <span class="label required">Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
+            <div class="c-12 form-group required">
+                <span class="label">Confirmo a veracidade das informações prestadas acima e estou ciente ainda que
                     omitir, em documento público ou particular, declaração que devia constar, ou nele
                     inserir ou fazer declaração falsa ou diversa que devia ser escrita, [...], é crime.
                     </span>

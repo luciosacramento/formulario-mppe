@@ -3,10 +3,64 @@ window.onload = function () {
     /* Inicializando forms:
     INDENTIFICADA / SIGILOSA / ANONIMA */
     var radioButtons = document.querySelectorAll('input[name="identify"]');
+    var voce_pessoa = document.querySelector('#voce-pessoa');
     let elements = document.querySelectorAll('.div-show-hide-identificar');
+    let vaiIdentificar = document.querySelector('#vai-identificar');
+    let vaiIdentificarform = document.querySelector('#vai-identificar-form');
+    let quemSofreShowHide = document.querySelectorAll(".quemSofreShowHide");
+    let quemSofre = document.querySelectorAll('input[name="quem-sofre"]');
+
     elements.forEach(function (element) {
         element.style.display = 'none';
     });
+
+    voce_pessoa.style.display = 'none';
+    //sofroViolencia.style.display = 'none';
+    
+    function getIdentifySelect(){
+        let radioButtons = document.querySelectorAll('input[name="tipo-manifestacao"]');
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                return radioButton.value;
+
+            }
+        }
+    }
+
+    function getQuemSofre(){
+        let radioButtons = document.querySelectorAll('input[name="quem-sofre"]');
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                return radioButton.value;
+            }
+        }
+    }
+
+    function ShowHideQuemSofre(val){
+        for (const element_ of quemSofreShowHide) {
+            element_.style.display = val;
+        }
+    }
+
+
+
+    quemSofre.forEach(function (radioButton) {
+        radioButton.addEventListener('change', function () {
+            if(this.value === "N"){
+                vaiIdentificar.style.display = "contents";
+                vaiIdentificarform.style.display = "contents";
+                ShowHideQuemSofre("contents");
+                
+            }else{
+                vaiIdentificar.style.display = "none";
+                vaiIdentificarform.style.display = "none";
+                ShowHideQuemSofre("none");
+            }
+
+        });
+    });
+
+    
 
     /* Inicializando boxes:
     INDENTIFICADA / SIGILOSA / ANONIMA */
@@ -15,7 +69,13 @@ window.onload = function () {
         if (radioButton.checked) {
             radioGroup = radioButton.closest('.radio-group-identify');
             radioGroup.classList.add('checked');
-            const atual = document.querySelector("#" + radioButton.value);
+            var mulher = "";
+            if(getIdentifySelect() === "violence-contra-mulher"){
+                mulher = "-mulher";
+                voce_pessoa.style.display = 'grid';
+                //sofroViolencia.style.display = 'contents';
+            }
+            const atual = document.querySelector("#" + radioButton.value + mulher);
             atual.style.display = 'contents';
         }
     })
@@ -26,10 +86,15 @@ window.onload = function () {
         radioButton.addEventListener('change', function () {
             const radioGroup = radioButton.closest('.radio-group-identify');
             const elements = document.querySelectorAll('.div-show-hide-identificar');
+
             elements.forEach(function (element) {
                 element.style.display = 'none';
             });
-            const atual = document.querySelector("#" + radioButton.value);
+            var mulher = "";
+            if(getIdentifySelect() === "violence-contra-mulher"){
+                mulher = "-mulher";
+            }
+            const atual = document.querySelector("#" + radioButton.value + mulher);
             atual.style.display = 'contents';
             var all = document.querySelectorAll("input[name='identify']");
             all.forEach(function (element) {
@@ -51,7 +116,7 @@ window.onload = function () {
             atual.style.display = 'contents';
             document.querySelector("#vai-identificar").style.display = 'contents';
 
-            if (radioButton.value === "solicitacao-certidao" || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd"  || radioButton.value === "violence-contra-mulher") {
+            if (radioButton.value === "solicitacao-certidao" || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd" ) {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
             }else {
@@ -85,11 +150,24 @@ window.onload = function () {
             document.querySelector("#vai-identificar").style.display = 'contents';
             document.querySelector("#vai-identificar-form").style.display = 'contents';
             document.querySelector("#subtitle-descricao").style.display = 'block';
+            voce_pessoa.style.display = 'none';
+            document.querySelector("#identificada-mulher").style.display = 'none';
+            document.querySelector("#identificada").style.display = 'contents';
+           
+           
+
+
+            if( radioButton.value === "violence-contra-mulher"){
+                voce_pessoa.style.display = 'grid';
+                document.querySelector("#identificada-mulher").style.display = 'contents';
+                document.querySelector("#identificada").style.display = 'none';
+               // sofroViolencia.style.display = 'contents';
+            }
 
             if (radioButton.value === 'elogio') {
                 document.querySelector("input[value='anonima']").closest('.radio-group-identify').style.display = 'none';
             }
-            if (radioButton.value === 'solicitacao-certidao' || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd" || radioButton.value === "violence-contra-mulher" ) {
+            if (radioButton.value === 'solicitacao-certidao' || radioButton.value === "solicitacao-informacao" || radioButton.value === "solicitacao-lgpd"  ) {
                 document.querySelector("#vai-identificar").style.display = 'none';
                 document.querySelector("#vai-identificar-form").style.display = 'none';
             }
@@ -103,6 +181,16 @@ window.onload = function () {
         });
     });
 
+    if(getQuemSofre() === "N"){
+        vaiIdentificar.style.display = "contents";
+        vaiIdentificarform.style.display = "contents";
+        ShowHideQuemSofre("contents");
+        
+    }else{
+        vaiIdentificar.style.display = "none";
+        vaiIdentificarform.style.display = "none";
+        ShowHideQuemSofre("none");
+    }
     /* Quando mudar o tipo de pessoa:
     PESSOA FISICA / PESSOA JURIDICA */
     ChangeTipoPessoa('pessoa-fisica');
@@ -123,7 +211,6 @@ window.onload = function () {
     var all = document.querySelectorAll("select[name='tipo-pessoa']");
     all.forEach(function (element) {
         element.addEventListener('change', function () {       
-            console.log(document.querySelector("select[name='tipo-pessoa']")); 
             ChangeTipoPessoa(this.value);
         }); 
     });
@@ -144,13 +231,13 @@ window.onload = function () {
         });
     }
 
-    /*Ocultando todos os formularios de identificação*/
+    /*Ocultando todos os formularios de identificação
     function hideAllFormIdentify() {
         elements = document.querySelectorAll('.div-show-hide');
         elements.forEach(function (element) {
             element.style.display = 'none';
         });
-    }
+    }*/
 
     var elementsWithAlt = document.querySelectorAll('[alt]');
 
