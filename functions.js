@@ -42,6 +42,28 @@ window.onload = function () {
         }
     }
 
+    function selectRadioIdentify(value){
+
+        // Obtém todos os botões de rádio em um formulário
+        var botoesRadio = document.querySelectorAll('input[name="identify"]');
+
+        // Itera pelos botões de rádio
+        for (var i = 0; i < botoesRadio.length; i++) {
+            // Verifica se o valor do botão de rádio é igual ao valor desejado
+            if (botoesRadio[i].value === value) {
+                // Define o botão de rádio como selecionado
+                botoesRadio[i].checked = true;
+                break; // Sai do loop, já que o botão desejado foi encontrado
+            }
+        }
+        var all = document.querySelectorAll("input[name='identify']");
+        all.forEach(function (element) {
+            element.closest('.radio-group-identify').classList.remove('checked');
+        });
+        console.log(document.querySelector("input[value='identificada']"));
+        document.querySelector("input[value='identificada']").closest('.radio-group-identify').classList.add('checked');
+    }
+
 
 
     quemSofre.forEach(function (radioButton) {
@@ -61,24 +83,26 @@ window.onload = function () {
     });
 
     
-
+    initializeBoxIdentify();
     /* Inicializando boxes:
     INDENTIFICADA / SIGILOSA / ANONIMA */
-    radioButtons.forEach(function (radioButton) {
-
-        if (radioButton.checked) {
-            radioGroup = radioButton.closest('.radio-group-identify');
-            radioGroup.classList.add('checked');
-            var mulher = "";
-            if(getIdentifySelect() === "violence-contra-mulher"){
-                mulher = "-mulher";
-                voce_pessoa.style.display = 'grid';
-                //sofroViolencia.style.display = 'contents';
+    function initializeBoxIdentify(){
+        radioButtons.forEach(function (radioButton) {
+    
+            if (radioButton.checked) {
+                radioGroup = radioButton.closest('.radio-group-identify');
+                radioGroup.classList.add('checked');
+                var mulher = "";
+                if(getIdentifySelect() === "violence-contra-mulher"){
+                    mulher = "-mulher";
+                    voce_pessoa.style.display = 'grid';
+                    //sofroViolencia.style.display = 'contents';
+                }
+                const atual = document.querySelector("#" + radioButton.value + mulher);
+                atual.style.display = 'contents';
             }
-            const atual = document.querySelector("#" + radioButton.value + mulher);
-            atual.style.display = 'contents';
-        }
-    })
+        })
+    }
 
     /* Acão show hide dox boxes
     INDENTIFICADA / SIGILOSA / ANONIMA */
@@ -153,8 +177,7 @@ window.onload = function () {
             voce_pessoa.style.display = 'none';
             document.querySelector("#identificada-mulher").style.display = 'none';
             document.querySelector("#identificada").style.display = 'contents';
-           
-           
+            selectRadioIdentify('identificada');       
 
 
             if( radioButton.value === "violence-contra-mulher"){
