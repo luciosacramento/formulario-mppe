@@ -268,9 +268,11 @@ window.onload = function () {
         var tooltip = document.createElement('span');
         tooltip.classList.add('tooltiptext');
         tooltip.innerHTML = element.getAttribute('alt');
-
         var tooltipWrapper = document.createElement('span');
         tooltipWrapper.classList.add('tooltip');
+        if(element.nodeName != 'LABEL'){
+            tooltipWrapper.classList.add('removeInterrogacao');
+        }
         tooltipWrapper.appendChild(element.cloneNode(true));
         tooltipWrapper.appendChild(tooltip);
 

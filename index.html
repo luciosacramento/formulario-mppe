@@ -73,6 +73,10 @@
         <div class="subtitle-number" id="subtitle-descricao">
             <span>01</span><h2>Descrição</h2>
         </div>
+
+        <div class="c-12">
+            <img src="img/muher_01.jpg" >
+        </div>
         
         <div id="voce-pessoa" class="c-12 form-group required">
             <label for="quem-sofre " class="label">Você é a pessoa que está sofrendo violência?</label>
@@ -303,9 +307,9 @@
                     <label for="porque-anonimo" class="label">Por que necessita realizar sua manifestação sem se identificar?</label>
                     <textarea name="porque-anonimo"  cols="30" rows="10"></textarea>
                 </div>
-    
-                <h2 class="subtitle">Identificação do Manifestante</h2>
-         
+                <div class="c-12 form-group">
+                    <h2 class="subtitle"  alt="Estes campos não são obrigatórios, mas, se possível, é interessante indicar formas de comunicação com o Ministério Público.">Identificação do Manifestante</h2>
+                </div>
                 <div class="c-3 form-group">
                     <label for="email" class="label">E-mail</label>
                     <input type="email" name="email" />
@@ -662,7 +666,7 @@
             <div class="c-12 form-group required">
                 <label for="relato-insatisfacao" class="label" alt="
                 Por favor, não esqueça de nos explicar como e onde os fatos se passaram. E, quando informar os nomes das pessoas, também é importante indicar quais os seus cargos.
-                ">Agora nos conte o que o deixou satisfeito com o MPPE</label>
+                ">Agora nos conte o que o deixou insatisfeito com o MPPE</label>
                 <textarea name="relato-insatisfacao"  cols="30" rows="10"></textarea>
             </div>
 
@@ -1440,14 +1444,14 @@ fornecê-los em arquivos separados<br> <br>
         <!-- violence-contra-mulher-->
 
         <div id="violence-contra-mulher" class=" div-show-hide-form">
-            <div class="c-12">
-                <img src="img/muher_01.jpg" >
-            </div>
+            
             <div class="c-12 form-group required">
                 <label for="o-que-esta-acontacendo" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
                 campo
                 ">Agora nos conte o que está acontecendo?</label>
-                <textarea name="o-que-esta-acontacendo"  cols="30" rows="10"></textarea>
+                <textarea name="o-que-esta-acontacendo"  cols="30" rows="10" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
+                campo
+                "></textarea>
             </div>
             <div class="c-3 form-group required">
                 <label for="periodo" class="label">Em que período ou data os fatos aconteceram?
@@ -1457,9 +1461,11 @@ fornecê-los em arquivos separados<br> <br>
             <div class="c-12 form-group required">
                 <label for="local" class="label" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
                 campo
-                ">Em que local específico, empresa ou instituição os fatos se passaram (Descreva)?
+                ">Em que local específico os fatos se passaram (Descreva)?
             </label>
-                <textarea name="local"  cols="30" rows="10"></textarea>
+                <textarea name="local"  cols="30" rows="10" alt="Incentivamos que não use termos ou expressões que o(a) identifique nesse
+                campo
+                "></textarea>
             </div>
             <div class="c-12 form-group required">
                 <label for="municipio" class="label">Município onde os fatos aconteceram</label>
@@ -1467,15 +1473,21 @@ fornecê-los em arquivos separados<br> <br>
                     <option value="">Selecione</option>
                 </select>
             </div>
-            <img src="img/muher_02.jpg" >
+            <img src="img/muher_03.jpg">
+            
             <div class="c-12 form-group required">
                 <label for="local" class="label" alt="Toda mulher tem o direito de procurar a Promotora ou o Promotor de Justiça da
                 sua comarca e pedir esclarecimentos sobre o processo que iniciou, narrar
                 detalhes da violência que sofreu, apresentar provas e pedir apoio.
                 ">Você gostaria de alguma providência do(a) Promotor(a) de Justiça?
             </label>
-                <textarea name="local"  cols="30" rows="10"></textarea>
+                <textarea name="local"  cols="30" rows="10" alt="Toda mulher tem o direito de procurar a Promotora ou o Promotor de Justiça da
+                sua comarca e pedir esclarecimentos sobre o processo que iniciou, narrar
+                detalhes da violência que sofreu, apresentar provas e pedir apoio.
+                "></textarea>
             </div>
+
+            <img src="img/muher_02.jpg" >
 
             <div class="subtitle-number">
                 <span>02</span><h2>Quem sofreu ou sofre a violência</h2>
@@ -1518,7 +1530,7 @@ fornecê-los em arquivos separados<br> <br>
                 <input type="text" name="nome-vitima" />
             </div>
 
-            <div class="c-6 form-group pessoa-fisica required">
+            <div class="c-6 form-group pessoa-fisica ">
                 <label for="telefone-vitima" class="label">Qual telefone da vítima para contato?</label>
                 <input type="tel" name="telefone-vitima" />
             </div>
@@ -1533,17 +1545,17 @@ fornecê-los em arquivos separados<br> <br>
                 </label>
                 <input type="email" name="email-vitima" />
             </div>
-            <div class="c-3 form-group pessoa-fisica required">
+            <div class="c-3 form-group pessoa-fisica">
                 <label for="endereco-vitima" class="label" alt="Nome da rua ou avenida, número da casa, número do apartamento ou referência">Qual o endereço completo da vítima?</label>
                 <input type="text" name="endereco-vitima" />
             </div>
-            <div class="c-3 form-group required">
+            <div class="c-3 form-group">
                 <label for="municipio-vitima" class="label">Em qual cidade reside a vítima?</label>
                 <select name="municipio-vitima" >
                     <option value="">Selecione</option>
                 </select>
             </div>
-            <div class="c-3 form-group">
+            <!--div class="c-3 form-group">
                 <label for="pessoa-com-deficiencia-vitima" class="label">A vítima é pessoa com deficiência?</label>
                 <div class="radio-group">
                     <input type="radio" name="pessoa-com-deficiencia-vitima" value="S">
@@ -1563,7 +1575,7 @@ fornecê-los em arquivos separados<br> <br>
                     <option value="">Redes sociais, internet ou whatsapp</option>
                     <option value="">Outros</option>
                 </select>
-            </div>
+            </div-->
 
             
             <div class="subtitle-number">
@@ -1573,9 +1585,9 @@ fornecê-los em arquivos separados<br> <br>
                 <label for="nome-agressor" class="label">Nome do(a) agressor(a)</label>
                 <input type="text" name="nome-agressor" />
             </div>
-            <div class="c-3 form-group pessoa-fisica">
-                <label for="endereco-agressor" class="label">Endereço do(a) agressor(a)</label>
-                <input type="text" name="endereco-agressor" />
+            <div class="c-3 form-group pessoa-fisica" >
+                <label for="endereco-agressor" class="label" alt="Caso não saiba o endereço do agressor, favor indicar onde podemos encontrá-lo.">Endereço do(a) agressor(a)</label>
+                <input type="text" name="endereco-agressor" alt="Caso não saiba o endereço do agressor, favor indicar onde podemos encontrá-lo."/>
             </div>
             <div class="c-3 form-group pessoa-fisica">
                 <label for="telefone-agressor" class="label">Possui telefone ou outro meio de contato do(a) agressor(a)? Se sim, qual?
@@ -1613,11 +1625,11 @@ fornecê-los em arquivos separados<br> <br>
                 </div>
             </div-->
 
-            <img src="img/muher_03.jpg">
+            
 
-            <div class="subtitle-number">
+            <!--div class="subtitle-number">
                 <span>05</span><h2>Histórico jurídico</h2>
-            </div>
+            </div-->
             <div class="c-3 form-group">
                 <label for="medida-protetiva" class="label">Já existe alguma medida protetiva em favor da vítima?
                 </label>
@@ -1674,7 +1686,7 @@ fornecê-los em arquivos separados<br> <br>
 
             
             <div class="subtitle-number">
-                <span>06</span><h2>Documentos</h2>
+                <span>05</span><h2>Documentos</h2>
             </div>
 
             <div class="c-12 form-group">
