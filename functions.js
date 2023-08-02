@@ -9,6 +9,8 @@ window.onload = function () {
     let vaiIdentificarform = document.querySelector('#vai-identificar-form');
     let quemSofreShowHide = document.querySelectorAll(".quemSofreShowHide");
     let quemSofre = document.querySelectorAll('input[name="quem-sofre"]');
+    const atencaoMulher = document.querySelector('#atencao-mulher');
+    
 
     elements.forEach(function (element) {
         element.style.display = 'none';
@@ -60,7 +62,7 @@ window.onload = function () {
         all.forEach(function (element) {
             element.closest('.radio-group-identify').classList.remove('checked');
         });
-        console.log(document.querySelector("input[value='identificada']"));
+        
         document.querySelector("input[value='identificada']").closest('.radio-group-identify').classList.add('checked');
     }
 
@@ -96,7 +98,9 @@ window.onload = function () {
                 if(getIdentifySelect() === "violence-contra-mulher"){
                     mulher = "-mulher";
                     voce_pessoa.style.display = 'grid';
-                    //sofroViolencia.style.display = 'contents';
+                    atencaoMulher.style.display = 'block';
+                }else{
+                    atencaoMulher.style.display = 'none';
                 }
                 const atual = document.querySelector("#" + radioButton.value + mulher);
                 atual.style.display = 'contents';
@@ -117,6 +121,9 @@ window.onload = function () {
             var mulher = "";
             if(getIdentifySelect() === "violence-contra-mulher"){
                 mulher = "-mulher";
+                atencaoMulher.style.display = 'block';                
+            }else{
+                atencaoMulher.style.display = 'none';
             }
             const atual = document.querySelector("#" + radioButton.value + mulher);
             atual.style.display = 'contents';
@@ -178,13 +185,14 @@ window.onload = function () {
             document.querySelector("#identificada-mulher").style.display = 'none';
             document.querySelector("#identificada").style.display = 'contents';
             selectRadioIdentify('identificada');       
-
-
+            
             if( radioButton.value === "violence-contra-mulher"){
                 voce_pessoa.style.display = 'grid';
                 document.querySelector("#identificada-mulher").style.display = 'contents';
                 document.querySelector("#identificada").style.display = 'none';
-               // sofroViolencia.style.display = 'contents';
+                atencaoMulher.style.display = 'block';
+            }else{
+                atencaoMulher.style.display = 'none';
             }
 
             if (radioButton.value === 'elogio') {
