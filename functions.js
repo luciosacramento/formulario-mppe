@@ -287,7 +287,6 @@ window.onload = function () {
         element.parentNode.replaceChild(tooltipWrapper, element);
     });
 
-
     let numeroMedidaGroup = document.getElementById("numero-medida-group");
 
     // Adicione um loop para percorrer a lista de elementos
@@ -321,8 +320,6 @@ window.onload = function () {
             }
         });
     }
-
-
 
 
 }
