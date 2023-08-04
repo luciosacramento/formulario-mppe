@@ -288,4 +288,39 @@ window.onload = function () {
     });
 
 
+    let numeroMedidaGroup = document.getElementById("numero-medida-group");
+
+    // Adicione um loop para percorrer a lista de elementos
+    let  medidaProtetiva = document.querySelectorAll('input[type="radio"][name="medida-protetiva"]');
+    for (let radioButton of medidaProtetiva) {
+        radioButton.addEventListener("change", function () {
+            // Verifica se a opção "Sim" está selecionada
+            if (radioButton.value === "S") {
+                // Exibe o campo de "número da medida"
+                numeroMedidaGroup.style.display = "block";
+            } else {
+                // Oculta o campo de "número da medida" caso a opção "Sim" não esteja selecionada
+                numeroMedidaGroup.style.display = "none";
+            }
+        });
+    }
+
+    numeroMedidaGroup = document.getElementById("numero-processo");
+
+    // Adicione um loop para percorrer a lista de elementos
+    medidaProtetiva = document.querySelectorAll('input[type="radio"][name="tem-processo"]');
+    for (let radioButton of medidaProtetiva) {
+        radioButton.addEventListener("change", function () {
+            // Verifica se a opção "Sim" está selecionada
+            if (radioButton.value === "S") {
+                // Exibe o campo de "número da medida"
+                numeroMedidaGroup.style.display = "block";
+            } else {
+                // Oculta o campo de "número da medida" caso a opção "Sim" não esteja selecionada
+                numeroMedidaGroup.style.display = "none";
+            }
+        });
+    }
+
+
 }
