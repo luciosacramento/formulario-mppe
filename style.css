@@ -387,7 +387,7 @@ margin-top: 14px;
 ,.required input[type='tel'],.required input[type='date'], .required select
 
 {
-  border-left: 4px solid #477fa0;
+  border-left: 4px solid #7d1f10;
 }
 
 .required>label::before,.required span>label::before{
@@ -398,7 +398,7 @@ margin-top: 14px;
   font-size: 20px;
   margin-top: 0;
   margin-left: -10px;
-  color: #477fa0;
+  color: #7d1f10;
 }
   
   
