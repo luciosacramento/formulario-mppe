@@ -304,7 +304,7 @@ window.onload = function () {
         });
     }
 
-    numeroMedidaGroup = document.getElementById("numero-processo");
+    numeroProcesso = document.getElementById("numero-processo");
 
     // Adicione um loop para percorrer a lista de elementos
     medidaProtetiva = document.querySelectorAll('input[type="radio"][name="tem-processo"]');
@@ -313,10 +313,10 @@ window.onload = function () {
             // Verifica se a opção "Sim" está selecionada
             if (radioButton.value === "S") {
                 // Exibe o campo de "número da medida"
-                numeroMedidaGroup.style.display = "block";
+                numeroProcesso.style.display = "block";
             } else {
                 // Oculta o campo de "número da medida" caso a opção "Sim" não esteja selecionada
-                numeroMedidaGroup.style.display = "none";
+                numeroProcesso.style.display = "none";
             }
         });
     }

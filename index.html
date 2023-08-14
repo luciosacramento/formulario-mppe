@@ -245,12 +245,12 @@
                     </select>
                 </div>
     
-                <div class="c-3 form-group pessoa-fisica required">
+                <div class="c-3 form-group pessoa-fisica ">
                     <label for="cpf" class="label" alt="Somente números.">CPF</label>
                     <input type="text" name="cpf" />
                 </div>
 
-                <div class="c-3 form-group pessoa-juridica required">
+                <div class="c-3 form-group pessoa-juridica ">
                     <label for="cnpj" class="label" alt="Somente números.">CNPJ</label>
                     <input type="text" name="cnpj" />
                 </div>
@@ -901,7 +901,7 @@
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-fisica required">
+            <div class="c-3 form-group pessoa-fisica ">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
@@ -1168,7 +1168,7 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
 
-            <div class="c-3 form-group pessoa-fisica required">
+            <div class="c-3 form-group pessoa-fisica ">
                 <label for="cpf" class="label" alt="Somente números.">CPF</label>
                 <input type="text" name="cpf" />
             </div>
@@ -1505,6 +1505,47 @@ fornecê-los em arquivos separados<br> <br>
                 </select>
             </div>
             <img src="img/mulher_03.jpg">
+
+            <div class="c-3 form-group">
+                <label for="medida-protetiva" class="label">Já existe alguma medida protetiva em favor da vítima?
+                </label>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="S">
+                    <label for="medida-protetiva">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="N">
+                    <label for="medida-protetiva">Não</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="medida-protetiva" value="NS">
+                    <label for="medida-protetiva">Não sei</label>
+                </div>
+            </div>
+            <div class="c-3 form-group" id="numero-medida-group" style="display: none;">
+                <label for="numero-medida" class="label">Por favor, nos indique o número desta medida:</label>
+                <input type="text" name="numero-medida" id="numero-medida">
+            </div>
+
+            <div class="c-3 form-group">
+                <label for="tem-processo" class="label">A violência está sendo investigada? Tem processo?</label>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="S">
+                    <label for="tem-processo">Sim</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="N">
+                    <label for="tem-processo">Não</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="tem-processo" value="NS">
+                    <label for="tem-processo">Não sei</label>
+                </div>
+            </div>
+            <div class="c-3 form-group" id="numero-processo" style="display: none;">
+                <label for="numero-processo" class="label">Por favor, nos indique o número do processo:</label>
+                <input type="text" name="numero-processo">
+            </div>
             
             <div class="c-12 form-group required">
                 <label for="local" class="label" alt="Toda mulher tem o direito de procurar a Promotora ou o Promotor de Justiça da
@@ -1661,7 +1702,7 @@ fornecê-los em arquivos separados<br> <br>
             <!--div class="subtitle-number">
                 <span>05</span><h2>Histórico jurídico</h2>
             </div-->
-            <div class="c-3 form-group">
+            <!--div class="c-3 form-group">
                 <label for="medida-protetiva" class="label">Já existe alguma medida protetiva em favor da vítima?
                 </label>
                 <div class="radio-group">
@@ -1695,7 +1736,7 @@ fornecê-los em arquivos separados<br> <br>
                     <input type="radio" name="numero-medida" value="NS">
                     <label for="numero-medida">Não sei</label>
                 </div>
-            </div-->
+            </div>
 
             <div class="c-3 form-group">
                 <label for="tem-processo" class="label">A violência está sendo investigada? Tem processo?</label>
@@ -1715,7 +1756,7 @@ fornecê-los em arquivos separados<br> <br>
             <div class="c-3 form-group" id="numero-processo" style="display: none;">
                 <label for="numero-processo" class="label">Por favor, nos indique o número do processo:</label>
                 <input type="text" name="numero-processo">
-            </div>
+            </div-->
 
             <div class="c-12 form-group">
                 <div class="checkbox">
