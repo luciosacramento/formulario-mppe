@@ -306,11 +306,11 @@ margin-top: 14px;
   }
 
   span.tooltip::before {
-      content: "?";
+      content: "?" ;
       position: absolute;
       width: 15px;
       height: 15px;
-      background-color: #90B79F;
+      background-color: #90B79F ;
       border: 0;
       border-radius: 100%;
       text-align: center;

@@ -278,7 +278,7 @@ window.onload = function () {
         tooltip.innerHTML = element.getAttribute('alt');
         var tooltipWrapper = document.createElement('span');
         tooltipWrapper.classList.add('tooltip');
-        if(element.nodeName != 'LABEL'){
+        if(element.nodeName != 'LABEL' && element.nodeName != 'H2'){
             tooltipWrapper.classList.add('removeInterrogacao');
         }
         tooltipWrapper.appendChild(element.cloneNode(true));
